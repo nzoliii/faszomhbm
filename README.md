@@ -27,6 +27,7 @@ Other help:<br>
 **Coldalliance:** Testing and helping with development.<br>
 **Hoboy:** Textures and models.<br>
 **Crowbar Collective:** Gluon gun sounds.<br>
+**70000HP:** MIRV and configs.<br>
 
 # **Build Guide:**
 
@@ -37,7 +38,5 @@ Download the repository, then open a shell prompt in that folder, then type the 
 Press enter.
 
 Now just wait for the build to finish and the new Jar file will be in `faszomhbm\build\libs`.
-**70000HP:** MIRV and configs.<br>
-**nzoliii:** Spicing some things up.<br>
 
 
