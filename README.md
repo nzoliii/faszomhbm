@@ -21,6 +21,11 @@ which is forked from the fork made by [Alcater](https://github.com/Alcatergit/Hb
 which is forked from the fork made by [TheOriginalGolem](https://github.com/TheOriginalGolem/Hbm-s-Nuclear-Tech-GIT) which is forked from the port made by [Drillgon200](https://github.com/Drillgon200/Hbm-s-Nuclear-Tech-GIT)
 which is ported from the original mod made by [HBMTheBobcat](https://github.com/HbmMods/Hbm-s-Nuclear-Tech-GIT).
 
+Other help:<br>
+**Coldalliance:** Testing and helping with development.<br>
+**Hoboy:** Textures and models.<br>
+**Crowbar Collective:** Gluon gun sounds.<br>
+
 The latest version can be found here, but you have to build it though.
 
 The licence for this project can be found in the Licence.MD File
@@ -34,17 +39,6 @@ Download the repository, then open a shell prompt in that folder, then type the 
 Press enter.
 
 Now just wait for the build to finish and the new Jar file will be in `faszomhbm\build\libs`.
-
-
-# Credits:<br>
-**HBMMods:** Original creator<br>
-**Drillgon200:** Original 1.12.2 port.<br>
-**TheOriginalGolem:** 1.12.2 bug fixing.<br>
-**Alcater:** Creator of a custom 1.12.2 extended version.<br>
-**Ctech Gaming:** Hamstering things up.<br>
-**Coldalliance:** Testing and helping with development.<br>
-**Hoboy:** Textures and models.<br>
-**Crowbar Collective:** Gluon gun sounds.<br>
 **70000HP:** MIRV and configs.<br>
 **nzoliii:** Spicing some things up.<br>
 
