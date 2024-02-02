@@ -1,6 +1,8 @@
 # **Faszom HBM**
 
 This is the edited version of Hamster Systems' custom version of the mod.
+The latest version can be found here, but you have to build it though.
+The licence for this project can be found in the Licence.MD File
 
 # **What have I done?**
 
@@ -25,10 +27,6 @@ Other help:<br>
 **Coldalliance:** Testing and helping with development.<br>
 **Hoboy:** Textures and models.<br>
 **Crowbar Collective:** Gluon gun sounds.<br>
-
-The latest version can be found here, but you have to build it though.
-
-The licence for this project can be found in the Licence.MD File
 
 # **Build Guide:**
 
