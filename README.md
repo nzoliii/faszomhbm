@@ -1,8 +1,8 @@
 # **Faszom HBM**
 
-This is the edited version of Hamster Systems' custom version of the mod.
-The latest version can be found here, but you have to build it though.
-The licence for this project can be found in the Licence.MD File
+This is the edited version of Hamster Systems' custom version of the mod.<br>
+The latest version can be found here, but you have to build it though.<br>
+The licence for this project can be found in the Licence.MD File<br>
 
 # **What have I done?**
 
