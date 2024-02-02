@@ -1,36 +1,31 @@
-# <u>**HBM Nuclear Tech Mod - 1.12.2 Hamster Reloaded**</u>
+# **Faszom HBM**
 
-This is Hamster Systems 1.12.2 custom version of the mod
+This is the edited version of Hamster Systems' custom version of the mod.
 
-# <u> **What have we done?** </u>
+# **What have I done?**
 
-Some people have asked what we have changed, And have stated in **their** description of this version "Hamster Systems for... i honestly dont know..." Well heres what we have done and plan to do!
+I just edited the en-US.lang file to include some custom death messages, replaced an image, replaced some sound files to my friend's puke and cough sounds because I thought it was funny.
 
-**Main Changes**
+**Main Changes:**
 
-> Fixed alot of the code instead of it being bandaided on top of one another.
-> Added new items, blocks, tools including stuff that use to be in 1.7.10
-> Fixed alot of bugs and issues like that.
+> - Edited coal dust death message.
+> - Edited asbestos death message.
+> - Edited meteor death message.
+> - Edited radiation death message.
+> - Replaced cough and vomit sounds.
+> - Rewrote mcmod.info so it is much more easier to read.
 
-#
-
+# Credits
+This mod is forked from [Hamster System's](https://github.com/Hamster-Systems/Hbm-s-Nuclear-Tech-GIT) fork
 which is forked from the fork made by [Alcater](https://github.com/Alcatergit/Hbm-s-Nuclear-Tech-GIT)
-which is forked from the fork made by [TheOriginalGolem](https://github.com/TheOriginalGolem/Hbm-s-Nuclear-Tech-GIT)
-which is forked from the port made by [Drillgon200](https://github.com/Drillgon200/Hbm-s-Nuclear-Tech-GIT)
+which is forked from the fork made by [TheOriginalGolem](https://github.com/TheOriginalGolem/Hbm-s-Nuclear-Tech-GIT) which is forked from the port made by [Drillgon200](https://github.com/Drillgon200/Hbm-s-Nuclear-Tech-GIT)
 which is ported from the original mod made by [HBMTheBobcat](https://github.com/HbmMods/Hbm-s-Nuclear-Tech-GIT).
 
-
-The latest version can be found on [Curse](https://www.curseforge.com/minecraft/mc-mods/hbms-nuclear-tech-hamster-reloaded) or under the [Releases page](https://github.com/Hamster-Systems/Hbm-s-Nuclear-Tech-GIT/releases) or on [Modrinth](https://modrinth.com/mod/hbms-nuclear-tech-hamster-reloaded).
+The latest version can be found here, but you have to build it though.
 
 The licence for this project can be found in the Licence.MD File
 
-
-### **Want to contribute?**
-
-If you want to contribute make a pull request and I'll review it as soon as possible.
-Every contribution is very much appreciated by me and the players.
-
-### **Build Guide:**
+# **Build Guide:**
 
 Download the repository, then open a shell prompt in that folder, then type the following:
 
@@ -38,11 +33,19 @@ Download the repository, then open a shell prompt in that folder, then type the 
 
 Press enter.
 
-Now just wait for the build to finish and the new Jar file will be in `Hbm-s-Nuclear-Tech-GIT\build\libs`.
+Now just wait for the build to finish and the new Jar file will be in `faszomhbm\build\libs`.
 
 
-Credits:
-HBM and all the contributors for the original 1.7 Mod
-Alcater for a big content update and some bugfixes to the orignal 1.12.2 Port.
+# Credits:<br>
+**HBMMods:** Original creator<br>
+**Drillgon200:** Original 1.12.2 port.<br>
+**TheOriginalGolem:** 1.12.2 bug fixing.<br>
+**Alcater:** Creator of a custom 1.12.2 extended version.<br>
+**Ctech Gaming:** Hamstering things up.<br>
+**Coldalliance:** Testing and helping with development.<br>
+**Hoboy:** Textures and models.<br>
+**Crowbar Collective:** Gluon gun sounds.<br>
+**70000HP:** MIRV and configs.<br>
+**nzoliii:** Spicing some things up.<br>
 
 
