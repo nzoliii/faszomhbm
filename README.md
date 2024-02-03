@@ -1,7 +1,7 @@
 # **Faszom HBM**
 
 This is the edited version of Hamster Systems' custom version of HBM's NTM mod.<br>
-The latest version can be found here, but you have to build it though.<br>
+The latest version can be found on Curseforge, but you have to build it though.<br>
 The licence for this project can be found in the Licence.MD File<br>
 
 # **What have I done?**
@@ -16,7 +16,6 @@ I just edited the en-US.lang file to include some custom death messages, replace
 > - Edited radiation death message.
 > - Replaced cough and vomit sounds.
 > - Rewrote mcmod.info so it is much more easier to read.
-> - Removed "Welcome back." message.
 
 # Credits
 This mod is forked from [Hamster System's](https://github.com/Hamster-Systems/Hbm-s-Nuclear-Tech-GIT) fork
