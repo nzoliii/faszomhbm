@@ -3,7 +3,7 @@
     "modid": "hbm",
     "name": "Faszom HBM",
     "description": "A mod that adds all kinds of nukes, reactors, and crazy weapons of mass destruction.",
-    "version": "1.6.6",
+    "version": "1.6.7",
     "credits": "\n\n§9HBMMods:§f Original creator.\n§9Drillgon200:§f Original 1.12.2 port.\n§9TheOriginalGolem:§f 1.12.2 bug fixing.\n§9Alcater:§f Creator of a custom 1.12.2 extended version.\n§9Ctech Gaming:§f Hamstering things up.\n§9Coldalliance:§f Testing and helping with development.\n§9Hoboy:§f Textures and models.\n§9Crowbar Collective:§f Gluon gun sounds.\n§970000HP:§f MIRV and configs.\n§9nzoliii:§f Spicing some things up.\n",
     "mcversion": "${mcversion}",
     "url": "https://tiktok.com/@nzoliii",

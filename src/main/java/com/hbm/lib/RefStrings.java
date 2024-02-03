@@ -3,8 +3,8 @@ package com.hbm.lib;
 public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";
-	public static final String VERSION = "1.6.6";
-	public static final String CHANGELOG = "$§d-Added Missing Resapies/n-Added More Audio";
+	public static final String VERSION = "1.6.7";
+	public static final String CHANGELOG = "$§9Minor bugfixes, nothing important.";
 	//HBM's Beta Naming Convention:
 	//V T (X)
 	//V -> next release version

@@ -1027,15 +1027,15 @@ public class ModEventHandler {
 			PacketDispatcher.sendTo(new KeybindPacket(EnumKeybind.TOGGLE_JETPACK, props.getEnableBackpack()), playerMP);
 
 			if (GeneralConfig.enableWelcomeMessage) {
-				e.player.sendMessage(new TextComponentTranslation("§3Welcome back§r"));
+				e.player.sendMessage(new TextComponentTranslation("§9Welcome back."));
 			}
 
 			if(HTTPHandler.newVersion && GeneralConfig.changelog) {
-				e.player.sendMessage(new TextComponentString("§aNew§e version §3" + HTTPHandler.versionNumber + "§e is available§r"));
-				e.player.sendMessage(new TextComponentString("§ePlaying on version §7" + RefStrings.VERSION + "§e right now§r"));
+				e.player.sendMessage(new TextComponentString("§fNew §9Faszom HBM§f version §9" + HTTPHandler.versionNumber + "§f is available."));
+				e.player.sendMessage(new TextComponentString("§fYou are playing on version §9" + RefStrings.VERSION + "§f right now."));
 				if(HTTPHandler.changes != ""){
 					String[] lines = HTTPHandler.changes.split("\\$");
-					e.player.sendMessage(new TextComponentString("§6[New Features]§r"));//RefStrings.CHANGELOG
+					e.player.sendMessage(new TextComponentString("§fChangelog:"));//RefStrings.CHANGELOG
 					for(String w: lines){
 						e.player.sendMessage(new TextComponentString(w));//RefStrings.CHANGELOG
 					}
