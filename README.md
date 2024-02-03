@@ -1,6 +1,6 @@
 # **Faszom HBM**
 
-This is the edited version of Hamster Systems' custom version of the mod.<br>
+This is the edited version of Hamster Systems' custom version of HBM's NTM mod.<br>
 The latest version can be found here, but you have to build it though.<br>
 The licence for this project can be found in the Licence.MD File<br>
 
