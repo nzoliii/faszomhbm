@@ -3,8 +3,8 @@ package com.hbm.lib;
 public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";
-	public static final String VERSION = "1.6.7";
-	public static final String CHANGELOG = "$§9Minor bugfixes, nothing important.";
+	public static final String VERSION = "1.6.8";
+	public static final String CHANGELOG = "$§9- Fixed items that have no names.\n- Fixed items that have no textures.\n- Renamed 'Balefire' to 'Béltűz'";
 	//HBM's Beta Naming Convention:
 	//V T (X)
 	//V -> next release version
