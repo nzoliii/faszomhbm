@@ -4890,3 +4890,22 @@ item.spill8.name=Spill 8
 
 tile.keypad_test.name=Keypad Test
 tile.book_crafting.name=Crafting Book
+
+tile.block_radspice.name=Radspice Block
+tile.turret_brandon.name=Brandon
+tile.test_render.name=Test Render
+tile.obj_tester.name=Object Tester
+tile.sliding_blast_door_keypad.name=Sliding Blast Door Keypad
+tile.conveyor.name=Conveyor
+tile.dummy_block_gascent.name=Gascent
+tile.dummy_block_uf6.name=UF6
+tile.dummy_block_puf6.name=PUF6
+tile.dummy_block_vault.name=Vault Block
+tile.dummy.block_blast.name=Blast Block
+tile.dummy_block_radgen.name=Radgen Block
+tile.dummy_port_radgen.name=Radgen Port
+tile.dummy_plate_compact_launcher.name=Compact Plate Launcher
+tile.dummy_port_compact_launcher.name=Compact Port Launcher
+tile.dummy_plate_launch_table.name=Launch Plate Table
+tile.dummy_port_launch_table.name=Launch Table Port
+tile.dummy_plate_cargo.name=Cargo Plate
