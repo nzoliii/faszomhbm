@@ -24,7 +24,7 @@ which is forked from the fork made by [TheOriginalGolem](https://github.com/TheO
 which is ported from the original mod made by [HBMTheBobcat](https://github.com/HbmMods/Hbm-s-Nuclear-Tech-GIT).
 
 Other help:<br>
-**Coldalliance:** Testing and helping with development.<br>
+**Coldalliance:** Testing and helping Hamster-Systems with development.<br>
 **Hoboy:** Textures and models.<br>
 **Crowbar Collective:** Gluon gun sounds.<br>
 **70000HP:** MIRV and configs.<br>
