@@ -1,4 +1,4 @@
-<br><img src="static_banners/title.png" alt="drawing" width="512"/><br>
+<br><img src="static_banners/title.png" alt="drawing" width="512"/>
 
 This mod is about building nuclear reactors, rockets, nukes, weapons and bunkers.<br>
 It is based on the awesome work of Alcater, Drillgon and HBM.<br>
@@ -14,7 +14,7 @@ The licence for this project can be found in the LICENSE.MD file<br>
 
 <br>
 <br>
-<br><img src="static_banners/what_have_i_done.png" alt="drawing" width="512"/><br>
+<br><img src="static_banners/what_have_i_done.png" alt="drawing" width="512"/>
 
 This mod doesn't aim to add any useful features, just some stuff that me and my friends found funny.<br>
 
@@ -64,7 +64,7 @@ which is ported from the original mod made by [HBMTheBobcat](https://github.com/
 
 <br>
 <br>
-<br><img src="static_banners/build_guide.png" alt="drawing" width="384"/><br>
+<br><img src="static_banners/build_guide.png" alt="drawing" width="384"/>
 
 Download the repository, then open a shell prompt in that folder, then type the following:
 
