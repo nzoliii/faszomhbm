@@ -3498,7 +3498,7 @@ public class ModItems {
 	public static final Item record_where_is_my_mind = new ItemModRecord("where_is_my_mind", HBMSoundHandler.whereIsMyMind, "record_where_is_my_mind").setCreativeTab(CreativeTabs.MISC);
 	public static final Item record_where_is_my_mind_retrowave = new ItemModRecord("where_is_my_mind_retrowave", HBMSoundHandler.whereIsMyMindRetrowave, "record_where_is_my_mind_retrowave").setCreativeTab(CreativeTabs.MISC);
 	public static final Item record_the_perfect_girl = new ItemModRecord("the_perfect_girl", HBMSoundHandler.thePerfectGirl, "record_the_perfect_girl").setCreativeTab(CreativeTabs.MISC);
-	public static final Item record_the_perfect_girl_retro = new ItemModRecord("the_perfect_girl_retrowave", HBMSoundHandler.thePerfectGirlRetrowave, "record_the_perfect_girl_retro").setCreativeTab(CreativeTabs.MISC);
+	public static final Item record_the_perfect_girl_retrowave = new ItemModRecord("the_perfect_girl_retrowave", HBMSoundHandler.thePerfectGirlRetrowave, "record_the_perfect_girl_retrowave").setCreativeTab(CreativeTabs.MISC);
 	
 	//Weird items
 	public static final Item flame_pony = new ItemCustomLore("flame_pony").setCreativeTab(MainRegistry.partsTab);
