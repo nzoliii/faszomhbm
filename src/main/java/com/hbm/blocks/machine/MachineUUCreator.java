@@ -33,7 +33,7 @@ public class MachineUUCreator extends BlockDummyable {
 
 		return null;
 	}
-
+	
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if(world.isRemote)
@@ -61,12 +61,12 @@ public class MachineUUCreator extends BlockDummyable {
 	public int[] getDimensions() {
 		return new int[] {2, 0, 3, 3, 1, 1};
 	}
-
+	
 	@Override
 	public int getOffset() {
 		return 3;
 	}
-
+	
 	@Override
 	protected void fillSpace(World world, int x, int y, int z, ForgeDirection dir, int o) {
 		super.fillSpace(world, x, y, z, dir, o);
@@ -88,10 +88,10 @@ public class MachineUUCreator extends BlockDummyable {
 		this.makeExtra(world, x, y + 2, z - 2);
 		this.makeExtra(world, x, y + 2, z);
 	}
-
+	
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {
 		return EnumBlockRenderType.ENTITYBLOCK_ANIMATED;
 	}
-
+	
 }

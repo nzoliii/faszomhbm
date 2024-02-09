@@ -24,7 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.Pre;
 
 public class MachineCharger extends BlockContainer implements ITooltipProvider, ILookOverlay {
-
+	
 	public final long maxThroughput;
 	public final boolean pointingUp;
 
@@ -41,7 +41,7 @@ public class MachineCharger extends BlockContainer implements ITooltipProvider, 
 	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileEntityCharger();
 	}
-
+	
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {
 		return EnumBlockRenderType.MODEL;
@@ -50,7 +50,10 @@ public class MachineCharger extends BlockContainer implements ITooltipProvider, 
 	@Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-    	tooltip.add("§aMax Chargerate: "+Library.getShortNumber(20 * maxThroughput)+"HE/s");
+    	if(maxThroughput == Long.MAX_VALUE / 20L)
+    		tooltip.add("§aMax Chargerate: Infinite HE/s");
+    	else
+    		tooltip.add("§aMax Chargerate: "+Library.getShortNumber(20 * maxThroughput)+"HE/s");
         this.addStandardInfo(tooltip);
         super.addInformation(stack, player, tooltip, advanced);
     }
@@ -58,12 +61,12 @@ public class MachineCharger extends BlockContainer implements ITooltipProvider, 
 	@Override
 	public void printHook(Pre event, World world, int x, int y, int z) {
 		TileEntity te = world.getTileEntity(new BlockPos(x, y, z));
-
+		
 		if(!(te instanceof TileEntityCharger))
 			return;
-
+		
 		TileEntityCharger charger = (TileEntityCharger) te;
-
+		
 		List<String> text = new ArrayList();
 
 		if(charger.totalCapacity > 0){

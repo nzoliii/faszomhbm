@@ -148,18 +148,18 @@ public class CentrifugeRecipes {
 				new ItemStack(ModItems.nugget_solinium, 1),
 				new ItemStack(Blocks.GRAVEL, 1) });
 		
-				recipes.put(RAREEARTH.ore(), new ItemStack[] {
+		recipes.put(RAREEARTH.ore(), new ItemStack[] {
 				new ItemStack(ModItems.powder_desh_mix, 1),
 				new ItemStack(ModItems.nugget_zirconium, 1),
 				new ItemStack(ModItems.nugget_zirconium, 1),
 				new ItemStack(Blocks.GRAVEL, 1) });
+
+		recipes.put(CINNABAR.ore(), new ItemStack[] {
+				new ItemStack(ModItems.cinnebar, 2),
+				new ItemStack(ModItems.cinnebar, 2),
+				new ItemStack(Items.REDSTONE, 1),
+				new ItemStack(Blocks.GRAVEL, 1) });
 		
-				recipes.put(CINNABAR.ore(), new ItemStack[] {
-					new ItemStack(ModItems.cinnebar, 2),
-					new ItemStack(ModItems.cinnebar, 2),
-					new ItemStack(Items.REDSTONE, 1),
-					new ItemStack(Blocks.GRAVEL, 1) });
-					
 		recipes.put(PU.ore(), new ItemStack[] {
 				new ItemStack(ModItems.powder_plutonium, 1),
 				new ItemStack(ModItems.powder_plutonium, 1),
@@ -220,7 +220,7 @@ public class CentrifugeRecipes {
 				new ItemStack(ModItems.ingot_starmetal, 2),
 				new ItemStack(ModItems.nugget_solinium, 2) });
 		
-				recipes.put(P_RED.ore(), new ItemStack[] {
+		recipes.put(P_RED.ore(), new ItemStack[] {
 				new ItemStack(Items.BLAZE_POWDER, 2),
 				new ItemStack(ModItems.powder_fire, 2),
 				new ItemStack(ModItems.ingot_phosphorus),

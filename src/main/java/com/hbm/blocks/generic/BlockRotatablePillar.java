@@ -1,6 +1,8 @@
 package com.hbm.blocks.generic;
 
 import java.util.List;
+
+import com.hbm.util.I18nUtil;
 import com.hbm.blocks.ModBlocks;
 
 import net.minecraft.block.Block;
@@ -30,14 +32,14 @@ public class BlockRotatablePillar extends BlockRotatedPillar {
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
 		if(stack.getItem() == Item.getItemFromBlock(ModBlocks.block_schrabidium_cluster)){
-			tooltip.add("Balefire nukes create small amounts of euphemium inside this block");
+			tooltip.add(I18nUtil.resolveKey("tile.block_schrabidium_cluster.desc"));
 		}
 		if(stack.getItem() == Item.getItemFromBlock(ModBlocks.block_euphemium_cluster)){
-			tooltip.add("Balefire nukes have created small amounts of euphemium inside this block");
+			tooltip.add(I18nUtil.resolveKey("tile.block_euphemium_cluster.desc"));
 		}
 		float hardness = this.getExplosionResistance(null);
 		if(hardness > 50){
-			tooltip.add("§6Blast Resistance: "+hardness+"§r");
+			tooltip.add("§6" + I18nUtil.resolveKey("trait.blastres", hardness));
 		}
 	}
 }

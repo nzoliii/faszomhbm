@@ -13,7 +13,7 @@ import com.hbm.main.MainRegistry;
 public class JsonConfig {
 
 	public static final Gson gson = new Gson();
-
+	
 	private static File getFile(String filename){
 		return new File(MainRegistry.proxy.getDataDir().getPath() + "/config/hbm" + File.separatorChar + filename);
 	}

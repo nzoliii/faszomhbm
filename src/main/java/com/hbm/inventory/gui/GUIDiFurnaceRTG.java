@@ -40,7 +40,7 @@ public class GUIDiFurnaceRTG extends GuiInfoContainer {
 	@Override
 	protected void drawGuiContainerForegroundLayer(int p_146979_1_, int p_146979_2_) {
 		String name = I18n.format(bFurnace.getName());
-
+		
 		this.fontRenderer.drawString(name, this.xSize / 2 - this.fontRenderer.getStringWidth(name) / 2, 6, 4210752);
 		this.fontRenderer.drawString(I18n.format("container.inventory"), 8, this.ySize - 96 + 2, 4210752);
 	}
@@ -51,7 +51,7 @@ public class GUIDiFurnaceRTG extends GuiInfoContainer {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
-
+		
 		if(bFurnace.isInvalid()) {
 			TileEntity te = bFurnace.getWorld().getTileEntity(bFurnace.getPos());
 			if(te instanceof TileEntityDiFurnaceRTG) {

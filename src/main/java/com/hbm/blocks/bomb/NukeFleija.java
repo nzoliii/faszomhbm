@@ -3,6 +3,7 @@ package com.hbm.blocks.bomb;
 import java.util.Random;
 import java.util.List;
 
+import com.hbm.util.I18nUtil;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.config.BombConfig;
 import com.hbm.entity.effect.EntityCloudFleija;
@@ -223,7 +224,7 @@ public class NukeFleija extends BlockContainer implements IBomb {
 
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add("§b[Schrabidium Bomb]§r");
-		tooltip.add(" §eRadius: "+BombConfig.fleijaRadius+"m§r");
+		tooltip.add("§b["+ I18nUtil.resolveKey("trait.schrabbomb")+"]§r");
+		tooltip.add(" §e"+I18nUtil.resolveKey("desc.radius", BombConfig.fleijaRadius)+"§r");
 	}
 }

@@ -11,9 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class ContainerFurnaceIron extends Container {
-
+	
 	protected TileEntityFurnaceIron furnace;
-
+	
 	public ContainerFurnaceIron(InventoryPlayer invPlayer, TileEntityFurnaceIron furnace) {
 		this.furnace = furnace;
 
@@ -26,7 +26,7 @@ public class ContainerFurnaceIron extends Container {
 		this.addSlotToContainer(new SlotMachineOutput(furnace.inventory, 3, 125, 35));
 		//upgrade
 		this.addSlotToContainer(new SlotItemHandler(furnace.inventory, 4, 17, 35));
-
+		
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 9; j++) {
 				this.addSlotToContainer(new Slot(invPlayer, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
@@ -51,9 +51,9 @@ public class ContainerFurnaceIron extends Container {
 				if(!this.mergeItemStack(originalStack, 6, this.inventorySlots.size(), true)) {
 					return ItemStack.EMPTY;
 				}
-
+				
 				slot.onSlotChange(originalStack, stack);
-
+				
 			} else if(!this.mergeItemStack(originalStack, 0, 3, false)) {
 				return ItemStack.EMPTY;
 			}

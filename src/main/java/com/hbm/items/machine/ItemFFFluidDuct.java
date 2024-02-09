@@ -2,6 +2,7 @@ package com.hbm.items.machine;
 
 import java.util.List;
 
+import com.hbm.util.I18nUtil;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.items.ModItems;
 import com.hbm.config.GeneralConfig;
@@ -93,7 +94,7 @@ public class ItemFFFluidDuct extends Item {
 	
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add("Right click with screwdriver to toggle extraction");
+		tooltip.add(I18nUtil.resolveKey("desc.extraction"));
 	}
 	
 	public static Fluid getFluidFromStack(ItemStack stack){

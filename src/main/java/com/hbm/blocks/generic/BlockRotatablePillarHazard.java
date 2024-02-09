@@ -9,7 +9,7 @@ import net.minecraft.block.material.Material;
 public class BlockRotatablePillarHazard extends BlockRotatablePillar implements IItemHazard {
 
 	ItemHazardModule module;
-
+	
 	public BlockRotatablePillarHazard(Material materialIn, String s) {
 		super(materialIn, s);
 		this.module = new ItemHazardModule();
@@ -19,7 +19,7 @@ public class BlockRotatablePillarHazard extends BlockRotatablePillar implements 
 		this(mat, s);
 		this.setSoundType(type);
 	}
-
+	
 	@Override
 	public ItemHazardModule getModule() {
 		return module;

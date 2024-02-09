@@ -34,10 +34,10 @@ public class SoundLoopFel extends SoundLoopMachine {
 
 		if(te instanceof TileEntityMachineMiningLaser) {
 			TileEntityMachineMiningLaser plant = (TileEntityMachineMiningLaser)te;
-
+			
 			if(this.volume != 3)
 				volume = 3;
-
+			
 			if(!plant.isOn)
 				this.donePlaying = true;
 		}

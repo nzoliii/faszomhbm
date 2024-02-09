@@ -6,14 +6,18 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.hbm.blocks.ModBlocks;
+import com.hbm.lib.Library;
 import com.hbm.items.ModItems;
 import com.hbm.items.gear.ArmorFSB;
 import com.hbm.items.weapon.ItemGunEgon;
+import com.hbm.render.misc.RenderScreenOverlay;
 import com.hbm.lib.HBMSoundHandler;
 import com.hbm.lib.Library;
 import com.hbm.saveddata.RadiationSavedData;
 import com.hbm.util.ContaminationUtil;
 
+import baubles.api.BaubleType;
+import baubles.api.IBauble;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,10 +31,10 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.Optional;
 
-public class ItemGeigerCounter extends Item {
-
-
+@Optional.InterfaceList({@Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")})
+public class ItemGeigerCounter extends Item implements IBauble {
 	
 	public ItemGeigerCounter(String s) {
 		this.setUnlocalizedName(s);
@@ -49,22 +53,9 @@ public class ItemGeigerCounter extends Item {
 			
 			if(ArmorFSB.hasFSBArmor((EntityPlayer)entity) && ((ArmorFSB)((EntityPlayer)entity).inventory.armorInventory.get(2).getItem()).geigerSound)
 				return;
-				playGeiger(world, (EntityPlayer)entity);
+			
+			playGeiger(world, (EntityPlayer)entity);
 		}
-	}
-	
-	static void setInt(ItemStack stack, int i, String name) {
-		if(!stack.hasTagCompound())
-			stack.setTagCompound(new NBTTagCompound());
-		
-		stack.getTagCompound().setInteger(name, i);
-	}
-	
-	public static int getInt(ItemStack stack, String name) {
-		if(stack.hasTagCompound())
-			return stack.getTagCompound().getInteger(name);
-		
-		return 0;
 	}
 
 	public static void playGeiger(World world, EntityPlayer player){
@@ -107,7 +98,7 @@ public class ItemGeigerCounter extends Item {
 				}
 				if(list.size() > 0){
 					int r = list.get(world.rand.nextInt(list.size()));
-
+					
 					if(r > 0){
 						world.playSound(null, player.posX, player.posY, player.posZ, HBMSoundHandler.geigerSounds[r-1], SoundCategory.PLAYERS, 1.0F, 1.0F);
 					}
@@ -143,5 +134,15 @@ public class ItemGeigerCounter extends Item {
 	@Override
 	public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
 		return !ItemStack.areItemsEqual(oldStack, newStack);
+	}
+
+	@Override
+	public BaubleType getBaubleType(ItemStack itemstack){
+		return BaubleType.TRINKET;
+	}
+
+	@Override
+	public void onWornTick(ItemStack itemstack, EntityLivingBase player) {
+		onUpdate(itemstack, player.world, player, 0, true);
 	}
 }

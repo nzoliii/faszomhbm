@@ -23,18 +23,18 @@ public class RBMKHeater extends RBMKBase {
 	public TileEntity createNewTileEntity(World world, int meta) {
 		if(meta >= offset)
 			return new TileEntityRBMKHeater();
-
+		
 		if(hasExtra(meta))
 			return new TileEntityProxyCombo(false, false, true);
 
 		return null;
 	}
-
+	
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ){
 		return openInv(worldIn, pos.getX(), pos.getY(), pos.getZ(), playerIn, ModBlocks.guiID_rbmk_heater, hand);
 	}
-
+	
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state){
 		return EnumBlockRenderType.MODEL;

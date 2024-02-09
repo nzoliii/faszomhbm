@@ -2,6 +2,7 @@ package com.hbm.render.tileentity;
 
 import java.nio.DoubleBuffer;
 
+import com.hbm.interfaces.IDoor;
 import org.apache.commons.lang3.tuple.Pair;
 import org.lwjgl.opengl.GL11;
 
@@ -11,7 +12,6 @@ import com.hbm.animloader.AnimationWrapper;
 import com.hbm.animloader.AnimationWrapper.EndResult;
 import com.hbm.animloader.AnimationWrapper.EndType;
 import com.hbm.blocks.BlockDummyable;
-import com.hbm.interfaces.IDoor;
 import com.hbm.main.ResourceManager;
 import com.hbm.render.WavefrontObjDisplayList;
 import com.hbm.tileentity.DoorDecl;
@@ -73,7 +73,7 @@ public class RenderDoorGeneric extends TileEntitySpecialRenderer<TileEntityDoorG
 			Animation anim = door.getAnim();
 			bindTexture(door.getTextureForPart(""));
 			long time = System.currentTimeMillis();
-			long startTime = te.state.isMovingState() ? te.animStartTime : time;
+	        long startTime = te.state.isMovingState() ? te.animStartTime : time;
 	        boolean reverse = te.state == IDoor.DoorState.OPEN || te.state == IDoor.DoorState.CLOSING;
 			AnimationWrapper w = new AnimationWrapper(startTime, anim).onEnd(new EndResult(EndType.STAY));
 			if(reverse)

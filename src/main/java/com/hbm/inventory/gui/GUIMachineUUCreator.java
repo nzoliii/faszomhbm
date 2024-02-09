@@ -24,15 +24,15 @@ public class GUIMachineUUCreator extends GuiInfoContainer {
 
 	private static ResourceLocation texture = new ResourceLocation(RefStrings.MODID + ":textures/gui/machine/gui_uu_creator.png");
 	private TileEntityMachineUUCreator uu_creator;
-
+	
 	public GUIMachineUUCreator(InventoryPlayer invPlayer, TileEntityMachineUUCreator tedf) {
 		super(new ContainerMachineUUCreator(invPlayer, tedf));
 		uu_creator = tedf;
-
+		
 		this.xSize = 176;
 		this.ySize = 186;
 	}
-
+	
 	@Override
 	public void drawScreen(int mouseX, int mouseY, float f) {
 		super.drawScreen(mouseX, mouseY, f);
@@ -57,21 +57,21 @@ public class GUIMachineUUCreator extends GuiInfoContainer {
 	@Override
 	protected void drawGuiContainerForegroundLayer( int i, int j) {
 		String name = this.uu_creator.hasCustomInventoryName() ? this.uu_creator.getInventoryName() : I18n.format(this.uu_creator.getInventoryName());
-
+		
 		this.fontRenderer.drawString("Produced UU", 56, 26, 0xE700FF);
 
 		String producedmb = "";
 		if(this.uu_creator.producedmb * 20 > 1000)
-			producedmb = Library.getShortNumber((long)this.uu_creator.producedmb * 20) + " mb/s";
+			producedmb = Library.getShortNumber((long)this.uu_creator.producedmb * 20) + " mB/s";
 		else
-			producedmb = this.uu_creator.producedmb * 20 + " mb/s";
+			producedmb = this.uu_creator.producedmb * 20 + " mB/s";
 
 		this.fontRenderer.drawString(producedmb, 123 - this.fontRenderer.getStringWidth(producedmb), 40, 0xE700FF);
-
+		
 		this.fontRenderer.drawString(name, this.xSize / 2 - this.fontRenderer.getStringWidth(name) / 2, 6, 4210752);
 		this.fontRenderer.drawString(I18n.format("container.inventory"), 8, this.ySize - 96 + 2, 4210752);
 	}
-
+	
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_, int p_146976_3_) {
 		super.drawDefaultBackground();

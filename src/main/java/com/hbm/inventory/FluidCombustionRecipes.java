@@ -9,22 +9,22 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
 public class FluidCombustionRecipes {
-
+	
 	public static HashMap<Fluid, Integer> resultingTU = new HashMap<Fluid, Integer>();
 	//for 1000 mb
 	public static void registerFluidCombustionRecipes() {
 		addBurnableFluid(ModForgeFluids.hydrogen, 5);
 		addBurnableFluid(ModForgeFluids.deuterium, 5);
 		addBurnableFluid(ModForgeFluids.tritium, 5);
-		
+
 		addBurnableFluid(ModForgeFluids.oil, 10);
 		addBurnableFluid(ModForgeFluids.hotoil, 10);
 		addBurnableFluid(ModForgeFluids.crackoil, 10);
 		addBurnableFluid(ModForgeFluids.hotcrackoil, 10);
-		
+
 		addBurnableFluid(ModForgeFluids.gas, 10);
 		addBurnableFluid(ModForgeFluids.fishoil, 15);
-		addBurnableFluid(ModForgeFluids.lubricant, 10);
+		addBurnableFluid(ModForgeFluids.lubricant, 20);
 		addBurnableFluid(ModForgeFluids.aromatics, 25);
 		addBurnableFluid(ModForgeFluids.petroleum, 25);
 		addBurnableFluid(ModForgeFluids.biogas, 25);
@@ -41,6 +41,7 @@ public class FluidCombustionRecipes {
 		addBurnableFluid(ModForgeFluids.lightoil, 200);
 		addBurnableFluid(ModForgeFluids.kerosene, 300);
 		addBurnableFluid(ModForgeFluids.gasoline, 800);
+
 		addBurnableFluid(ModForgeFluids.balefire, 1_000);
 		addBurnableFluid(ModForgeFluids.unsaturateds, 1_000);
 		addBurnableFluid(ModForgeFluids.nitan, 2_000);
@@ -59,7 +60,7 @@ public class FluidCombustionRecipes {
 		addBurnableFluid("plantoil", 50);
 		addBurnableFluid("acetaldehyde", 80);
 		addBurnableFluid("biodiesel", 175);
-
+		
 	}
 
 	public static int getFlameEnergy(Fluid f){

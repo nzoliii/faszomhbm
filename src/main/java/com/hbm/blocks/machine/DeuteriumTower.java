@@ -71,20 +71,20 @@ public class DeuteriumTower extends BlockDummyable implements ILookOverlay {
             return;
 
         TileEntity te = world.getTileEntity(new BlockPos(pos[0], pos[1], pos[2]));
-
+		
 		if(!(te instanceof TileEntityDeuteriumTower))
 			return;
-
+		
 		TileEntityDeuteriumTower extractor = (TileEntityDeuteriumTower) te;
-
+		
 		List<String> text = new ArrayList();
 		text.add(Library.getShortNumber(extractor.power) + "/" + Library.getShortNumber(extractor.getMaxPower()) + " HE");
-
+		
 		if(extractor.tanks[0] != null)
 			text.add("§a-> §r" + FluidRegistry.WATER.getLocalizedName(new FluidStack(FluidRegistry.WATER, 1)) + ": " + extractor.tanks[0].getFluidAmount() + "/" + extractor.tanks[0].getCapacity() + "mB");
 		if(extractor.tanks[1] != null)
 			text.add("§c<- §r" + ModForgeFluids.heavywater.getLocalizedName(new FluidStack(ModForgeFluids.heavywater, 1)) + ": " + extractor.tanks[1].getFluidAmount() + "/" + extractor.tanks[1].getCapacity() + "mB");
-
+		
 		ILookOverlay.printGeneric(event, I18nUtil.resolveKey(getUnlocalizedName() + ".name"), 0xffff00, 0x404000, text);
 	}
 }

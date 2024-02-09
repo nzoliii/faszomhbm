@@ -3,16 +3,14 @@ package com.hbm.lib;
 public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";
-	public static final String VERSION = "1.6.8";
-	public static final String CHANGELOG = "$§9- Fixed items that have no names.\n- Fixed items that have no textures.\n- Renamed 'Balefire' to 'Béltűz'";
+	public static final String VERSION = "1.6.9";
+	public static final String CHANGELOG = "§aAdded more Control panel mechanics$§aAdded Conveyors and Extractor/Inserter$§aAdded Torex Nuke$§aAdded Mk5 Nuke processing$§aAdded scortched nuke craters$§aAdded N² and Balefire charge$§aAdded Launchpad cooldown$§aAdded 7 Blockstates per waste block$§aAdded Galacticraft sealing to all big doors$§aAdded 1.7 Fuel system$§aAdded cable gauge$§aAdded peace dimension config$§aAdded hazmat potion resistance$§aAdded pocket radar$§aAdded Bauble support to rad counters$§bChanged RBMK render to be 4x faster but have stretched side texture$§bChanged Nuke and Missile models$§bChanged Batteries to only send to higher tier then themselves$§bChanged Radar and Forcefuel model$§bChanged Xenon-135 production 6x$§cRemoved N45 Mine$§cRemoved Old Drill$§cRemoved bad recipes$§eFixed crash when moving from reloaded$§eFixed Jetpack and hud sync$§eFixed Jungle dungeon spawning$§eFixed Door locking";
 	//HBM's Beta Naming Convention:
 	//V T (X)
 	//V -> next release version
 	//T -> build type
 	//X -> days since 10/10/10
 	//Drillgon200: I completely ignored this to make my own even worse naming system. Sigh.
-	//Callum: I continued to ignore this to make a even more complex and advanced nameing system that makes slightly more sence but not more
-	//Made it more 	
 	public static final String CLIENTSIDE = "com.hbm.main.ClientProxy";
 	public static final String SERVERSIDE = "com.hbm.main.ServerProxy";
 }

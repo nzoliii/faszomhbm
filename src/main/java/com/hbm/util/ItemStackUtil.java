@@ -22,7 +22,7 @@ public class ItemStackUtil {
 		else
 			return stack.copy();
 	}
-	
+
 	/**
 	 * Creates a new array that only contains the copied range.
 	 * @param inv
@@ -44,6 +44,7 @@ public class ItemStackUtil {
 
 		return copy;
 	}
+	
 	public static ItemStack carefulCopyWithSize(ItemStack stack, int size) {
 		if(stack == null)
 			return null;

@@ -3,6 +3,7 @@ package com.hbm.blocks.generic;
 import java.util.Random;
 import java.util.List;
 
+import com.hbm.util.I18nUtil;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.handler.RadiationSystemNT;
 import com.hbm.interfaces.IRadResistantBlock;
@@ -78,7 +79,7 @@ public class BlockNTMGlass extends BlockBreakable implements IRadResistantBlock 
 	
 	@Override
 	public int quantityDropped(IBlockState state, int fortune, Random random) {
-		return 0;
+		return doesDrop ? 1 : 0;
 	}
 	
 	@Override
@@ -90,7 +91,7 @@ public class BlockNTMGlass extends BlockBreakable implements IRadResistantBlock 
 	protected boolean canSilkHarvest() {
 		return false;
 	}
-	
+
 	@Override
 	public boolean isRadResistant(World worldIn, BlockPos blockPos){
 		return this.isRadResistant;
@@ -101,10 +102,10 @@ public class BlockNTMGlass extends BlockBreakable implements IRadResistantBlock 
 		super.addInformation(stack, player, tooltip, advanced);
 		float hardness = this.getExplosionResistance(null);
 		if(this.isRadResistant){
-			tooltip.add("§2[Radiation Shielding]§r");
+			tooltip.add("§2[" + I18nUtil.resolveKey("trait.radshield") + "]");
 		}
 		if(hardness > 50){
-			tooltip.add("§6Blast Resistance: "+hardness+"§r");
+			tooltip.add("§6" + I18nUtil.resolveKey("trait.blastres", hardness));
 		}
 	}
 

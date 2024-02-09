@@ -34,7 +34,7 @@ public class ItemRendererBedrockOre extends TEISRBase {
 		if(stack.getItem() instanceof ItemBedrockOre){
 			ItemBedrockOre oreItem = (ItemBedrockOre)stack.getItem();
 			int color = BobMathUtil.interpolateColor(this.dirtyColor, ItemBedrockOre.getColor(stack), this.cleanliness);
-
+			
 			if(layerTex == null){
 				layerTex = Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite("hbm:items/ore_bedrock_layer");
 			}

@@ -34,10 +34,10 @@ public class SoundLoopChemplant extends SoundLoopMachine {
 
 		if(te instanceof TileEntityMachineChemfac) {
 			TileEntityMachineChemfac plant = (TileEntityMachineChemfac)te;
-
+			
 			if(this.volume != 3)
 				volume = 3;
-
+			
 			if(!plant.isProgressing)
 				this.donePlaying = true;
 		}

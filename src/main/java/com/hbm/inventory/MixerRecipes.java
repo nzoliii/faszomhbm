@@ -23,7 +23,7 @@ public class MixerRecipes {
 	public static HashMap<Fluid, Integer> recipesFluidOutputAmount = new HashMap();
 	public static HashMap<Fluid, Integer> recipesDurations = new HashMap();
 	public static HashMap<Fluid, AStack> recipesItemInputs = new HashMap();
-
+	
 	public static void copyChemplantRecipes() {
 		for(EnumChemistryTemplate enumX : EnumChemistryTemplate.values()){
 			FluidStack[] fStacks = ChemplantRecipes.recipeFluidOutputs.get(enumX);

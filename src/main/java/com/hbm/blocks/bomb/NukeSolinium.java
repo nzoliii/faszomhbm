@@ -2,6 +2,7 @@ package com.hbm.blocks.bomb;
 
 import java.util.List;
 
+import com.hbm.util.I18nUtil;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.config.BombConfig;
 import com.hbm.entity.effect.EntityCloudSolinium;
@@ -195,10 +196,10 @@ public class NukeSolinium extends BlockContainer implements IBomb {
 
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add("§3[Solinium Bomb]§r");
-		tooltip.add(" §eRadius: "+BombConfig.soliniumRadius+"m§r");
+		tooltip.add("§3["+ I18nUtil.resolveKey("trait.soliniumbomb")+"]§r");
+		tooltip.add(" §e"+I18nUtil.resolveKey("desc.radius", BombConfig.soliniumRadius)+"§r");
 		tooltip.add("");
-		tooltip.add("§dThis Neutron Bomb is the weaponized daughter of the G.E.C.K.§r");
-		tooltip.add("§dIt emits so much neutron radiation that it transmutates all radioactive elements in range via alpha decay until only non-radioactive elements remain.§r");
+		tooltip.add("§d"+I18nUtil.resolveKey("desc.nukesolinium1")+"§r");
+		tooltip.add("§d"+I18nUtil.resolveKey("desc.nukesolinium2")+"§r");
 	}
 }

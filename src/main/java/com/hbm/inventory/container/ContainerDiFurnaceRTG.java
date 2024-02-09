@@ -50,12 +50,12 @@ public class ContainerDiFurnaceRTG extends Container {
     {
 		ItemStack var3 = ItemStack.EMPTY;
 		Slot var4 = (Slot) this.inventorySlots.get(par2);
-
+		
 		if (var4 != null && var4.getHasStack())
 		{
 			ItemStack var5 = var4.getStack();
 			var3 = var5.copy();
-
+			
             if (par2 <= 3) {
 				if (!this.mergeItemStack(var5, 4, this.inventorySlots.size(), true))
 				{
@@ -66,7 +66,7 @@ public class ContainerDiFurnaceRTG extends Container {
 			{
 				return ItemStack.EMPTY;
 			}
-
+			
 			if (var5.getCount() == 0)
 			{
 				var4.putStack(ItemStack.EMPTY);
@@ -76,7 +76,7 @@ public class ContainerDiFurnaceRTG extends Container {
 				var4.onSlotChanged();
 			}
 		}
-
+		
 		return var3;
     }
 }

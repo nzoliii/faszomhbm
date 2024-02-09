@@ -1,3 +1,7 @@
+
+
+# **HBM Nuclear Tech Mod - 1.12.2 Extended Edition**
+
 # CraftTweaker Integration
 Removing of oreDict recipes is currently not supported.
 
@@ -8,12 +12,12 @@ Removing of oreDict recipes is currently not supported.
 mods.ntm.Assembler.addRecipe(IItemStack output, IItemStack[] inputs, int duration);<br>
 ``mods.ntm.Assembler.addRecipe(<minecraft:beef>, [<minecraft:cooked_beef>*4, <minecraft:egg>*6], 30);``
 
+mods.ntm.Assembler.replaceRecipe(IItemStack output, IItemStack[] inputs, int duration);<br>
+``mods.ntm.Assembler.replaceRecipe(<hbm:machine_silex>, [<minecraft:glass>, <minecraft:cobblestone>], 50);``
+
 mods.ntm.Assembler.removeRecipe(IItemStack output);<br>
 ``mods.ntm.Assembler.removeRecipe(<hbm:machine_silex>);``
 
-
-mods.ntm.Assembler.replaceRecipe(IItemStack output, IItemStack[] inputs, int duration);<br>
-``mods.ntm.Assembler.replaceRecipe(<hbm:machine_silex>, [<minecraft:glass>, <minecraft:cobblestone>], 50);``
 
 ## Blast Furnace
 
@@ -157,3 +161,4 @@ Burn 1mB of experience fluid and get 5 TU<br>mods.ntm.FluidCombustion.addBurnabl
 
 mods.ntm.FluidCombustion.removeBurnableFluid(String inputFluid);<br>
 ``mods.ntm.FluidCombustion.removeBurnableFluid("experience");``
+

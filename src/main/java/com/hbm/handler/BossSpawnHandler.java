@@ -134,7 +134,7 @@ public class BossSpawnHandler {
 				}
 			}
 		}
-		
+
 		if(GeneralConfig.enableMeteorStrikes && !world.isRemote) {
 			meteorUpdate(world);
 		}
@@ -173,7 +173,7 @@ public class BossSpawnHandler {
 						ItemStack armor = p.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
 						if(armor != null && ArmorModHandler.hasMods(armor)) {
 							ItemStack mod = ArmorModHandler.pryMods(armor)[ArmorModHandler.helmet_only];
-
+							
 							if(mod != null) {
 								if(mod.getItem() == ModItems.protection_charm) {
 									repell = true;
@@ -229,4 +229,3 @@ public class BossSpawnHandler {
 		return (int)o;
 	}
 }
-

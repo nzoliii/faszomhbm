@@ -20,7 +20,7 @@ public class ContainerDiFurnace extends Container {
 		dualPower = 0;
 		diFurnace = tedf;
 		
-		//INPUT
+		//Inputs
 		this.addSlotToContainer(new SlotItemHandler(tedf.inventory, 0, 80, 18));
 		this.addSlotToContainer(new SlotItemHandler(tedf.inventory, 1, 80, 54));
 		//Fuel

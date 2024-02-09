@@ -2,6 +2,7 @@ package com.hbm.items.machine;
 
 import java.util.List;
 
+import com.hbm.util.I18nUtil;
 import com.hbm.items.ModItems;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -21,7 +22,7 @@ public class ItemSatChip extends Item {
 	
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add("Satellite frequency: " + getFreq(stack));
+		tooltip.add(I18nUtil.resolveKey("desc.satellitefr", getFreq(stack)));
 	}
 	
 	public static int getFreq(ItemStack stack) {

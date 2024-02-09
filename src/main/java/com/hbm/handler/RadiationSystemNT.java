@@ -72,7 +72,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 public class RadiationSystemNT {
 
 	public static float minRadRate = 0.000005F;
-	
+
 	/**Per world radiation storage data*/
 	private static Map<World, WorldRadiationData> worldMap = new HashMap<>();
 	/**A tick counter so radiation only updates once every second.*/
@@ -309,7 +309,7 @@ public class RadiationSystemNT {
 						if(entity instanceof EntityPlayer){
 							EntityPlayer player = (EntityPlayer) entity;
 							if(RadiationConfig.neutronActivation){
-								double recievedRadiation = ContaminationUtil.getNoNeutronPlayerRads(player)*0.00004D-0.0002D; //5Rad/s threshold
+								double recievedRadiation = ContaminationUtil.getNoNeutronPlayerRads(player)*0.00004D-(0.00004D * RadiationConfig.neutronActivationThreshold); //20Rad/s threshold
 								float neutronRads = ContaminationUtil.getPlayerNeutronRads(player);
 								if(neutronRads > 0){
 									ContaminationUtil.contaminate(player, ContaminationUtil.HazardType.NEUTRON, ContaminationUtil.ContaminationType.CREATIVE, neutronRads * 0.05F);
@@ -1113,7 +1113,7 @@ public class RadiationSystemNT {
 		 * @return the pocket at the specified position, or the first pocket if it doesn't exist
 		 */
 		public RadPocket getPocket(BlockPos pos){
-			if(pocketsByBlock == null){
+            if(pocketsByBlock == null){
                 //If pocketsByBlock is null, there's only one pocket anyway
                 return pockets[0];
             } else {

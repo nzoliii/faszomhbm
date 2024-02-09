@@ -326,17 +326,19 @@ public class InventoryUtil {
 			}
 		}
 	}
+
 	public static boolean doesArrayHaveIngredients(IItemHandler inv, int start, int end, List<AStack> ingredients) {
 		ItemStack[] copy = ItemStackUtil.carefulCopyArrayTruncate(inv, start, end);
 		AStack[] req = new AStack[ingredients.size()];
 		for (int idx = 0; idx < req.length; ++idx) {
 			req[idx] = ingredients.get(idx) == null ? null : ingredients.get(idx).copy();
-	}
+		}
 
 		for (AStack ingredient : req) {
 			if (ingredient == null) {
 				continue;
 			}
+
 			for (ItemStack input : copy) {
 				if (input == null || input.isEmpty()) {
 					continue;
@@ -400,5 +402,4 @@ public class InventoryUtil {
 
 		return false;
 	}
-
 }

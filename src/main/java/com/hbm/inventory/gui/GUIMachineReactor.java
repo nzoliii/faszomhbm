@@ -33,7 +33,7 @@ public class GUIMachineReactor extends GuiInfoContainer {
 		this.drawCustomInfoStat(mouseX, mouseY, guiLeft + 47, guiTop + 34, 6, 18, mouseX, mouseY, new String[] { tooltip });
 		this.drawCustomInfoStat(mouseX, mouseY, guiLeft + 55, guiTop + 34, 18, 18, mouseX, mouseY, new String[] { breeder.charge + " operation(s) left" });
 		super.renderHoveredToolTip(mouseX, mouseY);
-		}
+	}
 	
 	@Override
 	protected void drawGuiContainerForegroundLayer(int i, int j) {

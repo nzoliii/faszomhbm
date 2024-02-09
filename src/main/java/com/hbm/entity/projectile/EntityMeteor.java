@@ -1,5 +1,6 @@
 package com.hbm.entity.projectile;
 
+import com.hbm.config.CompatibilityConfig;
 import com.hbm.config.GeneralConfig;
 import com.hbm.explosion.ExplosionLarge;
 import com.hbm.lib.HBMSoundHandler;
@@ -17,7 +18,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EntityMeteor extends EntityThrowable {
-	
+
 	public boolean safe = false;
 
 	public EntityMeteor(World p_i1582_1_) {
@@ -47,7 +48,7 @@ public class EntityMeteor extends EntityThrowable {
         
         if(this.world.getBlockState(new BlockPos((int)this.posX, (int)this.posY, (int)this.posZ)).getMaterial() != Material.AIR)
         {
-            if(!this.world.isRemote)
+            if(!this.world.isRemote && CompatibilityConfig.isWarDim(world))
     		{	
     			world.createExplosion(this, this.posX, this.posY, this.posZ, 5 + rand.nextFloat(), !safe);
     			if(GeneralConfig.enableMeteorTails) {
@@ -86,7 +87,7 @@ public class EntityMeteor extends EntityThrowable {
 
     @Override
 	@SideOnly(Side.CLIENT)
-	public int getBrightnessForRender() {
+    public int getBrightnessForRender() {
         return 15728880;
     }
 
@@ -98,7 +99,7 @@ public class EntityMeteor extends EntityThrowable {
 	@Override
 	protected void onImpact(RayTraceResult result) {
 	}
-	
+
 	@Override
 	public void readEntityFromNBT(NBTTagCompound nbt) {
 		this.safe = nbt.getBoolean("safe");
@@ -108,5 +109,4 @@ public class EntityMeteor extends EntityThrowable {
 	public void writeEntityToNBT(NBTTagCompound nbt) {
 		nbt.setBoolean("safe", safe);
 	}
-
 }

@@ -23,7 +23,7 @@ public class RenderHeaterElectric extends TileEntitySpecialRenderer<TileEntityHe
 		GL11.glTranslated(x + 0.5D, y, z + 0.5D);
 		GL11.glEnable(GL11.GL_LIGHTING);
 		GL11.glEnable(GL11.GL_CULL_FACE);
-
+		
 		switch(tile.getBlockMetadata() - BlockDummyable.offset) {
 		case 3: GL11.glRotatef(270, 0F, 1F, 0F); break;
 		case 5: GL11.glRotatef(0, 0F, 1F, 0F); break;
@@ -33,7 +33,7 @@ public class RenderHeaterElectric extends TileEntitySpecialRenderer<TileEntityHe
 
 		bindTexture(ResourceManager.heater_electric_tex);
 		ResourceManager.heater_electric.renderAll();
-
+		
 		GL11.glPopMatrix();
 	}
 }

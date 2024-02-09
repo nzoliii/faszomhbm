@@ -55,8 +55,8 @@ public class JEIConfig implements IModPlugin {
 
 	public static final String ASSEMBLY = "hbm.assembly";
 	public static final String CHEMPLANT = "hbm.chemplant";
-	public static final String CYCLOTRON = "hbm.cyclotron";
 	public static final String MIXER = "hbm.mixer";
+	public static final String CYCLOTRON = "hbm.cyclotron";
 	public static final String PRESS = "hbm.press";
 	public static final String ALLOY = "hbm.alloy";
 	public static final String BOILER = "hbm.boiler";
@@ -248,7 +248,6 @@ public class JEIConfig implements IModPlugin {
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_block_centrifuge));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_block_chemplant));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_block_cyclotron));
-		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_block_drill));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_block_flare));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_block_fluidtank));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_block_pumpjack));
@@ -262,7 +261,6 @@ public class JEIConfig implements IModPlugin {
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_port_assembler));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_port_chemplant));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_port_cyclotron));
-		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_port_drill));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_port_flare));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_port_fluidtank));
 		blacklist.addIngredientToBlacklist(new ItemStack(ModBlocks.dummy_port_pumpjack));

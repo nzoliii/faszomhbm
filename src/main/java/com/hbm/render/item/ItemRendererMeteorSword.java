@@ -31,7 +31,7 @@ public class ItemRendererMeteorSword extends TEISRBase {
 	@Override
 	public void renderByItem(ItemStack stack) {
 		GL11.glTranslated(0.5, 0.5, 0.5);
-		
+
 		Minecraft mc = Minecraft.getMinecraft();
 		Minecraft.getMinecraft().getRenderItem().renderItem(stack, itemModel);
 
@@ -75,12 +75,12 @@ public class ItemRendererMeteorSword extends TEISRBase {
 
             GlStateManager.pushMatrix();
             GlStateManager.translate(-0.5F, -0.5F, -0.5F);
-
+            
             BufferBuilder bufferbuilder = tessellator.getBuffer();
             bufferbuilder.begin(7, DefaultVertexFormats.ITEM);
 
             int color = (0xFF << 24) | ((byte)((r * in) * 255) << 16) | ((byte)((g * in) * 255) << 8) | ((byte)((b * in) * 255));
-
+            
             for (EnumFacing enumfacing : EnumFacing.values())
             {
             	 Minecraft.getMinecraft().getRenderItem().renderQuads(bufferbuilder, itemModel.getQuads((IBlockState)null, enumfacing, 0L), color, stack);
@@ -88,7 +88,7 @@ public class ItemRendererMeteorSword extends TEISRBase {
 
             Minecraft.getMinecraft().getRenderItem().renderQuads(bufferbuilder, itemModel.getQuads((IBlockState)null, (EnumFacing)null, 0L), color, stack);
             tessellator.draw();
-
+            
             GL11.glPopMatrix();
             /*BufferBuilder buf = tessellator.getBuffer();
             buf.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);

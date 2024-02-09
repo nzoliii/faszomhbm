@@ -27,7 +27,7 @@ public class ItemCapacitor extends Item {
 		
 		ModItems.ALL_ITEMS.add(this);
 	}
-	
+
 	public static String getColor(long a, long b){
 		float fraction = 100F * a/b;
 		if(fraction > 75)
@@ -36,7 +36,7 @@ public class ItemCapacitor extends Item {
 			return "§e";
 		return "§c";
 	}
-
+	
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (this == ModItems.redcoil_capacitor) {
@@ -97,5 +97,5 @@ public class ItemCapacitor extends Item {
     		stack.setTagCompound(new NBTTagCompound());
 
     	stack.getTagCompound().setInteger("dura", dura);
-    }	
+    }
 }

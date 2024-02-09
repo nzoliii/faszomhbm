@@ -53,7 +53,7 @@ public class HazardTypeRadiation extends HazardTypeBase {
 		list.add(TextFormatting.YELLOW + (rad + " RAD/s"));
 		
 		if(stack.getCount() > 1) {
-			list.add(TextFormatting.YELLOW + "Stack: " + ((Math.floor(level * 1000 * stack.getCount()) / 1000) + " RAD/s"));
+			list.add(TextFormatting.YELLOW + I18nUtil.resolveKey("desc.stack")+" " + ((Math.floor(level * 1000 * stack.getCount()) / 1000) + " RAD/s"));
 		}
 	}
 

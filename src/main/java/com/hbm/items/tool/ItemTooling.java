@@ -57,8 +57,8 @@ public class ItemTooling extends Item {
 			tooltip.add("Could be used instead of a fuse...");
 		}
 	}
+
 	public ToolType getType(){
 		return type;
 	}
 }
-

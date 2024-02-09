@@ -80,6 +80,7 @@ public final class HBMSoundHandler {
 	public static SoundEvent zomgShoot;
 	public static SoundEvent jetpackTank;
 	public static SoundEvent nullTau;
+	public static SoundEvent nullRadar;
 	public static SoundEvent immolatorIgnite;
 	public static SoundEvent immolatorShoot;
 	public static SoundEvent defabSpinup;
@@ -128,7 +129,6 @@ public final class HBMSoundHandler {
 	public static SoundEvent lockHang;
 	public static SoundEvent vaultScrapeNew;
 	public static SoundEvent vaultThudNew;
-	public static SoundEvent minerOperate;
 	public static SoundEvent missileAssembly2;
 	public static SoundEvent sonarPing;
 	public static SoundEvent radawayUse;
@@ -254,7 +254,6 @@ public final class HBMSoundHandler {
 	public static SoundEvent alarmAPCPass = registerBypass("alarm.apcPass");
 	public static SoundEvent alarmRazorTrain = registerBypass("alarm.razortrainHorn");
 	public static SoundEvent soyuzed = registerBypass("alarm.soyuzed");
-	public static SoundEvent alarmLockDown = registerBypass("alarm.lockdown");
 	public static SoundEvent metalStep = registerBypass("step.metal");
 	public static SoundEvent iron = registerBypass("step.iron");
 	public static SoundEvent ironLand = registerBypass("step.iron_land");
@@ -265,11 +264,19 @@ public final class HBMSoundHandler {
 	public static SoundEvent sectorSweep = registerBypass("music.recordsectorsweep");
 	public static SoundEvent vortalCombat = registerBypass("music.recordvortalcombat");
 	public static SoundEvent glass = registerBypass("music.transmission");
-	
+
+	// CUSTOM SONGS OWO
+	public static SoundEvent whereIsMyMind = registerBypass("music.recordwhereismymind");
+	public static SoundEvent whereIsMyMindRetrowave = registerBypass("music.recordwhereismymindretrowave");
+	public static SoundEvent thePerfectGirl = registerBypass("music.recordtheperfectgirl");
+	public static SoundEvent thePerfectGirlRetrowave = registerBypass("music.recordtheperfectgirlretrowave");
+	// CUSTOM SONGS OWO
+
 	public static SoundEvent metalBlock = registerBypass("step.metalBlock");
 	
 	public static SoundEvent[] geigerSounds;
 	public static SoundEvent[] voiceSounds;
+
 	
 	
 	public static void init() {
@@ -341,6 +348,7 @@ public final class HBMSoundHandler {
 		zomgShoot = register("weapon.zomgShoot");
 		jetpackTank = register("item.jetpackTank");
 		nullTau = register("misc.nullTau");
+		nullRadar = register("misc.nullRadar");
 		immolatorIgnite = register("weapon.immolatorIgnite");
 		immolatorShoot = register("weapon.immolatorShoot");
 		defabSpinup = register("weapon.defabSpinup");
@@ -389,7 +397,6 @@ public final class HBMSoundHandler {
 		lockHang = register("block.lockHang");
 		vaultScrapeNew = register("block.vaultScrapeNew");
 		vaultThudNew = register("block.vaultThudNew");
-		minerOperate = register("block.minerOperate");
 		missileAssembly2 = register("block.missileAssembly2");
 		sonarPing = register("block.sonarPing");
 		radawayUse = register("item.radaway");

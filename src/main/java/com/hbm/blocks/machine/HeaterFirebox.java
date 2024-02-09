@@ -57,7 +57,7 @@ public class HeaterFirebox extends BlockDummyable implements ITooltipProvider, I
 		this.addStandardInfo(list);
 		super.addInformation(stack, worldIn, list, flagIn);
 	}
-	
+
 	@Override
     public void printHook(Pre event, World world, int x, int y, int z) {
         int[] pos = this.findCore(world, x, y, z);

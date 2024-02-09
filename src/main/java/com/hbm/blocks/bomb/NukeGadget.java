@@ -2,12 +2,11 @@ package com.hbm.blocks.bomb;
 
 import java.util.List;
 
+import com.hbm.util.I18nUtil;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.config.BombConfig;
-import com.hbm.config.GeneralConfig;
-import com.hbm.entity.effect.EntityNukeCloudNoShroom;
-import com.hbm.entity.effect.EntityNukeCloudSmall;
-import com.hbm.entity.logic.EntityNukeExplosionMK4;
+import com.hbm.entity.effect.EntityNukeTorex;
+import com.hbm.entity.logic.EntityNukeExplosionMK5;
 import com.hbm.interfaces.IBomb;
 import com.hbm.lib.InventoryHelper;
 import com.hbm.main.MainRegistry;
@@ -93,19 +92,9 @@ public class NukeGadget extends BlockContainer implements IBomb {
 			
 			world.playSound(null, x, y, z, SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.BLOCKS, 1.0f, world.rand.nextFloat() * 0.1F + 0.9F); // x,y,z,sound,volume,pitch
 			
-	    	world.spawnEntity(EntityNukeExplosionMK4.statFac(world, BombConfig.gadgetRadius, x + 0.5, y + 0.5, z + 0.5));
-			if (GeneralConfig.enableNukeClouds) {
-				EntityNukeCloudSmall entity2 = new EntityNukeCloudSmall(world, BombConfig.gadgetRadius);
-				entity2.posX = x;
-				entity2.posY = y;
-				entity2.posZ = z;
-				world.spawnEntity(entity2);
-			} else {
-				EntityNukeCloudSmall entity2 = new EntityNukeCloudNoShroom(world, BombConfig.gadgetRadius);
-				entity2.posX = x;
-				entity2.posY = y - 15;
-				entity2.posZ = z;
-				world.spawnEntity(entity2);
+	    	world.spawnEntity(EntityNukeExplosionMK5.statFac(world, BombConfig.gadgetRadius, x + 0.5, y + 0.5, z + 0.5));
+			if (BombConfig.enableNukeClouds) {
+				EntityNukeTorex.statFac(world, x + 0.5, y + 0.5, z + 0.5, BombConfig.gadgetRadius);
 			}
 		}
 
@@ -198,11 +187,11 @@ public class NukeGadget extends BlockContainer implements IBomb {
 
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add("§2[Nuclear Bomb]§r");
-		tooltip.add(" §eRadius: "+BombConfig.gadgetRadius+"m§r");
+		tooltip.add("§2["+ I18nUtil.resolveKey("trait.nuclearbomb")+"]"+"§r");
+		tooltip.add(" §e"+I18nUtil.resolveKey("desc.radius", BombConfig.gadgetRadius)+"§r");
 		if(!BombConfig.disableNuclear){
-			tooltip.add("§2[Fallout]§r");
-			tooltip.add(" §aRadius: "+(int)BombConfig.gadgetRadius*(1+BombConfig.falloutRange/100)+"m§r");
+			tooltip.add("§2["+ I18nUtil.resolveKey("trait.fallout")+"]"+"§r");
+			tooltip.add(" §e"+I18nUtil.resolveKey("desc.radius", (int)BombConfig.gadgetRadius*(1+BombConfig.falloutRange/100))+"§r");
 		}
 	}
 }

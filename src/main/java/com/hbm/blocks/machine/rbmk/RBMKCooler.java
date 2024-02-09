@@ -20,7 +20,7 @@ public class RBMKCooler extends RBMKBase {
 
 		return null;
 	}
-
+	
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state){
 		return EnumBlockRenderType.MODEL;

@@ -2,6 +2,7 @@ package com.hbm.blocks.bomb;
 
 import java.util.List;
 
+import com.hbm.util.I18nUtil;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.lib.InventoryHelper;
 import com.hbm.main.MainRegistry;
@@ -35,7 +36,7 @@ public class RailgunPlasma extends BlockContainer {
 	
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add("Uses Deuterium Plasma Capsules");
+		tooltip.add(I18nUtil.resolveKey("desc.usesdpc"));
 	}
 	
 	@Override

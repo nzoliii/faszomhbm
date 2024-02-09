@@ -13,18 +13,18 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 
 public class GUIRBMKHeater extends GuiInfoContainer {
-
+	
 	private static ResourceLocation texture = new ResourceLocation(RefStrings.MODID + ":textures/gui/reactors/gui_rbmk_heater.png");
 	private TileEntityRBMKHeater rod;
 
 	public GUIRBMKHeater(InventoryPlayer invPlayer, TileEntityRBMKHeater tedf) {
 		super(new ContainerRBMKHeater(invPlayer, tedf));
 		rod = tedf;
-
+		
 		this.xSize = 176;
 		this.ySize = 186;
 	}
-
+	
 	@Override
 	public void drawScreen(int mouseX, int mouseY, float f) {
 		super.drawScreen(mouseX, mouseY, f);
@@ -33,11 +33,11 @@ public class GUIRBMKHeater extends GuiInfoContainer {
 		FFUtils.renderTankInfo(this, mouseX, mouseY, guiLeft + 126, guiTop + 23, 16, 58, rod.tanks[1]);
 		super.renderHoveredToolTip(mouseX, mouseY);
 	}
-
+	
 	@Override
 	protected void drawGuiContainerForegroundLayer(int i, int j) {
 		String name = I18n.format(this.rod.getName());
-
+		
 		this.fontRenderer.drawString(name, this.xSize / 2 - this.fontRenderer.getStringWidth(name) / 2, 6, 4210752);
 		this.fontRenderer.drawString(I18n.format("container.inventory"), 8, this.ySize - 96 + 2, 4210752);
 	}

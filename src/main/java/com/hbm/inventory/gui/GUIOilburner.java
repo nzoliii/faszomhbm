@@ -2,7 +2,6 @@ package com.hbm.inventory.gui;
 
 import com.hbm.forgefluid.FFUtils;
 import com.hbm.inventory.FluidCombustionRecipes;
-import com.hbm.inventory.MachineRecipes;
 import com.hbm.inventory.container.ContainerOilburner;
 import com.hbm.packet.NBTControlPacket;
 import com.hbm.packet.PacketDispatcher;

@@ -36,7 +36,7 @@ public class ItemBlockHazard extends ItemBlock {
 	public ItemHazardModule getModule() {
 		return module;
 	}
-	
+
 	@Override
 	public int getItemBurnTime(ItemStack itemStack) {
 		return burntime;

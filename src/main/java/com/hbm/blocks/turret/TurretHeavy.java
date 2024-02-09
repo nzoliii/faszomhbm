@@ -43,10 +43,9 @@ public class TurretHeavy extends TurretBase {
 					Math.cos(yaw / 180.0F * (float) Math.PI) * Math.cos(pitch / 180.0F * (float) Math.PI));
 			
 			vector.normalize();
-
+			
 			TileEntityTurretHeavy te = (TileEntityTurretHeavy)world.getTileEntity(pos);
 			te.recoil = 0.5D;
-
 
 			if(!world.isRemote) {
 				EntityBullet bullet = new EntityBullet(world);

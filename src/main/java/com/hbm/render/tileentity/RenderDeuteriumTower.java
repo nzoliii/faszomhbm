@@ -9,7 +9,7 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 
 public class RenderDeuteriumTower extends TileEntitySpecialRenderer<TileEntityDeuteriumTower> {
-
+	
 	@Override
 	public boolean isGlobalRenderer(TileEntityDeuteriumTower te) {
 		return true;
@@ -17,7 +17,7 @@ public class RenderDeuteriumTower extends TileEntitySpecialRenderer<TileEntityDe
 
 	@Override
 	public void render(TileEntityDeuteriumTower te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
-
+	
 		GL11.glPushMatrix();
 		GL11.glTranslated(x, y, z);
 		GlStateManager.enableLighting();
@@ -44,7 +44,7 @@ public class RenderDeuteriumTower extends TileEntitySpecialRenderer<TileEntityDe
 		bindTexture(ResourceManager.deuterium_tower_tex);
 		ResourceManager.deuterium_tower.renderAll();
 		GlStateManager.shadeModel(GL11.GL_FLAT);
-
+        
 		GL11.glEnable(GL11.GL_CULL_FACE);
 		GL11.glPopMatrix();
 	}

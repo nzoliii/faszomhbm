@@ -14,11 +14,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class BlockClean extends BlockBase {
-
+	
 	public BlockClean(Material m, String s){
 		super(m, s);
 	}
-
+	
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
 		tooltip.add("§3["+I18nUtil.resolveKey("trait.cleanroom")+"§3]");

@@ -29,7 +29,7 @@ public class FurnaceIron extends BlockDummyable implements ITooltipProvider {
 		if(meta >= 12) return new TileEntityFurnaceIron();
 		return new TileEntityProxyCombo(true, false, false);
 	}
-
+	
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 	    return standardOpenBehavior(world, pos.getX(), pos.getY(), pos.getZ(), player, 0);

@@ -22,14 +22,14 @@ public class RenderMixer extends TileEntitySpecialRenderer<TileEntityMachineMixe
 		GL11.glTranslated(x + 0.5D, y, z + 0.5D);
 		GlStateManager.enableLighting();
 		GL11.glDisable(GL11.GL_CULL_FACE);
-
+		
 		GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		if(mixer.uuMixer)
 			bindTexture(ResourceManager.mixer_uu_tex);
 		else
 			bindTexture(ResourceManager.mixer_tex);
 		ResourceManager.mixer.renderPart("Main");
-
+		
 		GL11.glPushMatrix();
 		GL11.glRotatef(mixer.prevRotation + (mixer.rotation - mixer.prevRotation) * partialTicks, 0, -1, 0);
 		ResourceManager.mixer.renderPart("Mixer");
@@ -37,19 +37,19 @@ public class RenderMixer extends TileEntitySpecialRenderer<TileEntityMachineMixe
 
 		int totalFill = 0;
 		int totalMax = 0;
-
+		
 		if(mixer.tanks[2].getFluid() != null) {
 			totalFill += mixer.tanks[2].getFluidAmount();
 			totalMax += mixer.tanks[2].getCapacity();
 		}
-
+		
 		if(totalFill > 0) {
 			GL11.glDepthMask(false);
 			GL11.glDisable(GL11.GL_TEXTURE_2D);
 			GL11.glEnable(GL11.GL_BLEND);
 			GL11.glAlphaFunc(GL11.GL_GREATER, 0);
 			OpenGlHelper.glBlendFunc(770, 771, 1, 0);
-
+			
 			Color color = new Color(ModForgeFluids.getFluidColor(mixer.outputFluid));
 			GL11.glColor4f(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, 0.75F);
 			GL11.glTranslated(0, 1, 0);
@@ -68,9 +68,9 @@ public class RenderMixer extends TileEntitySpecialRenderer<TileEntityMachineMixe
 			GL11.glEnable(GL11.GL_TEXTURE_2D);
 		}
 		GL11.glShadeModel(GL11.GL_FLAT);
-
+		
 		GL11.glEnable(GL11.GL_CULL_FACE);
-
+		
 		GL11.glPopMatrix();
 	}
 }

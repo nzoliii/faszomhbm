@@ -32,7 +32,7 @@ public class JetpackBreak extends JetpackBase {
 
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-		return "hbm:textures/models/JetPackBlue.png";
+		return "hbm:textures/armor/JetPackBlue.png";
 	}
 
 	@Override
@@ -84,11 +84,11 @@ public class JetpackBreak extends JetpackBase {
 
 				if(player.motionY < -1)
 					player.motionY += 0.2D;
-				
-					else if(player.motionY < -0.1)
+
+				else if(player.motionY < -0.1)
 					player.motionY += 0.1D;
 				
-					else if(player.motionY < 0)
+				else if(player.motionY < 0)
 					player.motionY = 0;
 
 				world.playSound(null, player.posX, player.posY, player.posZ, HBMSoundHandler.flamethrowerShoot, SoundCategory.PLAYERS, 0.25F, 1.5F);

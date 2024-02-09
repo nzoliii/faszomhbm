@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class ContainerMachineExcavator extends Container {
-
+	
 	TileEntityMachineExcavator excavator;
 
 	public ContainerMachineExcavator(InventoryPlayer invPlayer, TileEntityMachineExcavator tile) {
@@ -31,7 +31,7 @@ public class ContainerMachineExcavator extends Container {
 				this.addSlotToContainer(new SlotMachineOutput(tile.inventory, 5 + j + i * 3, 136 + j * 18, 5 + i * 18));
 			}
 		}
-
+		
 		//Inventory
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 9; j++) {
@@ -49,12 +49,12 @@ public class ContainerMachineExcavator extends Container {
     {
 		ItemStack var3 = ItemStack.EMPTY;
 		Slot var4 = (Slot) this.inventorySlots.get(par2);
-
+		
 		if (var4 != null && var4.getHasStack())
 		{
 			ItemStack var5 = var4.getStack();
 			var3 = var5.copy();
-
+			
             if (par2 <= 3) {
 				if (!this.mergeItemStack(var5, 4, this.inventorySlots.size(), true))
 				{
@@ -65,7 +65,7 @@ public class ContainerMachineExcavator extends Container {
 			{
 				return ItemStack.EMPTY;
 			}
-
+			
 			if (var5.getCount() == 0)
 			{
 				var4.putStack(ItemStack.EMPTY);
@@ -75,7 +75,7 @@ public class ContainerMachineExcavator extends Container {
 				var4.onSlotChanged();
 			}
 		}
-
+		
 		return var3;
     }
 

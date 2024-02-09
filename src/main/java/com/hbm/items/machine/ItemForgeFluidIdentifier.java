@@ -8,9 +8,9 @@ import com.hbm.items.ModItems;
 import com.hbm.lib.RefStrings;
 import com.hbm.main.MainRegistry;
 import com.hbm.config.GeneralConfig;
-import com.hbm.forgefluid.FluidTypeHandler;
 import com.hbm.tileentity.conductor.TileEntityFFDuctBaseMk2;
 import com.hbm.util.I18nUtil;
+import com.hbm.forgefluid.FluidTypeHandler;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -58,7 +58,7 @@ public class ItemForgeFluidIdentifier extends Item implements IHasCustomModel {
 		if(GeneralConfig.registerTanks){
 			if (tab == this.getCreativeTab() || tab == CreativeTabs.SEARCH) {
 				for (Entry<String, Fluid> set : FluidRegistry.getRegisteredFluids().entrySet()) {
-				if(FluidTypeHandler.noID(set.getValue())) continue;
+					if(FluidTypeHandler.noID(set.getValue())) continue;
 					ItemStack stack = new ItemStack(this, 1, 0);
 					NBTTagCompound tag = new NBTTagCompound();
 					tag.setString("fluidtype", set.getKey());
@@ -79,7 +79,7 @@ public class ItemForgeFluidIdentifier extends Item implements IHasCustomModel {
 		}
 		list.add(TextFormatting.YELLOW + I18nUtil.resolveKey("info.templatefolder"));
 		list.add("");
-		list.add("Universal fluid identifier for:");
+		list.add(I18nUtil.resolveKey("desc.unfluidid"));
 		if (f != null)
 			list.add("   " + f.getLocalizedName(new FluidStack(f, 1000)));
 		else

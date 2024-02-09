@@ -24,8 +24,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class WasteLog extends BlockRotatedPillar implements IItemHazard {
-	ItemHazardModule module;
 
+	ItemHazardModule module;
+	
 	public WasteLog(Material mat, SoundType type, String s) {
 		super(mat);
 		this.setUnlocalizedName(s);
@@ -36,12 +37,12 @@ public class WasteLog extends BlockRotatedPillar implements IItemHazard {
 		this.module = new ItemHazardModule();
 		ModBlocks.ALL_BLOCKS.add(this);
 	}
-	
+
 	@Override
 	public ItemHazardModule getModule() {
 		return module;
 	}
-
+	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		if(this == ModBlocks.waste_log) {
@@ -75,7 +76,6 @@ public class WasteLog extends BlockRotatedPillar implements IItemHazard {
 	public int quantityDropped(IBlockState state, int fortune, Random random) {
 		return 2 + random.nextInt(3);
 	}
-
 
 	public IBlockState withSameRotationState(IBlockState state){
 		if(state == null)

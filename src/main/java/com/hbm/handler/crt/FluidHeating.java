@@ -19,7 +19,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 @ZenRegister
 @ZenClass("mods.ntm.FluidHeating")
 public class FluidHeating {
-
+	
 	private static class ActionAddBoilRecipe implements IAction{
 		private String inputFluid;
 		private int inputAmount;

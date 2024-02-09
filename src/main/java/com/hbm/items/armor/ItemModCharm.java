@@ -19,9 +19,9 @@ public class ItemModCharm extends ItemArmorMod {
 
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> list, ITooltipFlag flagIn){
-
+	
 		list.add("§bYou feel blessed.");
-
+		
 		if(this == ModItems.protection_charm) {
 			list.add("§bDiverts meteors away from the player.");
 			list.add("§bMeteors no longer destroy blocks.");
@@ -31,7 +31,7 @@ public class ItemModCharm extends ItemArmorMod {
 			list.add("§bDisables meteorite spawning.");
 			list.add("§bNegates broadcaster damage");
 		}
-
+		
 		super.addInformation(stack, worldIn, list, flagIn);
 	}
 
@@ -42,9 +42,9 @@ public class ItemModCharm extends ItemArmorMod {
 
 	@Override
 	public void modDamage(LivingHurtEvent event, ItemStack armor) {
-
+		
 		if(event.getSource() == ModDamageSource.broadcast) {
-
+			
 			if(this == ModItems.protection_charm)
 				event.setAmount(event.getAmount()*0.5F);
 			if(this == ModItems.meteor_charm)

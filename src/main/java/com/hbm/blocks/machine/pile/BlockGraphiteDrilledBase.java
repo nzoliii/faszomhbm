@@ -3,7 +3,7 @@ package com.hbm.blocks.machine.pile;
 import java.util.Random;
 
 import com.hbm.blocks.ModBlocks;
-import com.hbm.blocks.generic.BlockHazardFuel ;
+import com.hbm.blocks.generic.BlockHazardFuel;
 import com.hbm.items.ModItems;
 
 import net.minecraft.block.SoundType;

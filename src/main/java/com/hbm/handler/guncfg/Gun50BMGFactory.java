@@ -39,7 +39,7 @@ public class Gun50BMGFactory {
 		config.ammoCap = 50;
 		config.reloadType = GunConfiguration.RELOAD_FULL;
 		config.allowsInfinity = true;
-		config.crosshair = Crosshair.L_CROSS;
+		config.crosshair = Crosshair.L_BOX;
 		config.durability = 2000;
 		config.reloadSound = GunConfiguration.RSOUND_MAG;
 		config.firingSound = HBMSoundHandler.calShoot;
@@ -279,7 +279,7 @@ public class Gun50BMGFactory {
 		config.ammoCap = 50;
 		config.reloadType = GunConfiguration.RELOAD_FULL;
 		config.allowsInfinity = true;
-		config.crosshair = Crosshair.NONE;
+		config.crosshair = Crosshair.L_CROSS;
 		config.durability = 100000;
 		config.reloadSound = GunConfiguration.RSOUND_MAG;
 		config.firingSound = HBMSoundHandler.howard_fire;

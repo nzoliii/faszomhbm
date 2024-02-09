@@ -38,7 +38,7 @@ public class MachineDiFurnaceRTG extends BlockContainer {
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
 	private final boolean isActive;
 	private static boolean keepInventory;
-
+	
 	public MachineDiFurnaceRTG(Material materialIn, String s, boolean state) {
 		super(materialIn);
 		isActive = state;
@@ -48,7 +48,7 @@ public class MachineDiFurnaceRTG extends BlockContainer {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		ModBlocks.ALL_BLOCKS.add(this);
 	}
-
+	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return Item.getItemFromBlock(ModBlocks.machine_difurnace_rtg_off);
@@ -58,12 +58,12 @@ public class MachineDiFurnaceRTG extends BlockContainer {
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new TileEntityDiFurnaceRTG();
 	}
-
+	
 	@Override
 	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
 		this.setDefaultFacing(worldIn, pos, state);
 	}
-
+	
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if(world.isRemote)
@@ -81,7 +81,7 @@ public class MachineDiFurnaceRTG extends BlockContainer {
 			return false;
 		}
 	}
-
+	
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
 		if (!keepInventory)
@@ -96,7 +96,7 @@ public class MachineDiFurnaceRTG extends BlockContainer {
         }
         super.breakBlock(worldIn, pos, state);
 	}
-
+	
 	private void setDefaultFacing(World worldIn, BlockPos pos, IBlockState state){
 		if (!worldIn.isRemote)
         {
@@ -126,23 +126,23 @@ public class MachineDiFurnaceRTG extends BlockContainer {
             worldIn.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
         }
 	}
-
-
+	
+	
 	@Override
 	public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand) {
 		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
 	}
-
+	
 	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[]{FACING});
 	}
-
+	
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		return ((EnumFacing)state.getValue(FACING)).getIndex();
 	}
-
+	
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		EnumFacing enumfacing = EnumFacing.getFront(meta);
@@ -154,45 +154,45 @@ public class MachineDiFurnaceRTG extends BlockContainer {
 
         return this.getDefaultState().withProperty(FACING, enumfacing);
 	}
-
-
-
+	
+	
+	
 	@Override
 	public IBlockState withRotation(IBlockState state, Rotation rot) {
 		return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));
 	}
-
+	
 	@Override
 	public IBlockState withMirror(IBlockState state, Mirror mirrorIn)
 	{
 	   return state.withRotation(mirrorIn.toRotation((EnumFacing)state.getValue(FACING)));
 	}
-
+	
 	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 		worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
 	}
-
+	
 	public static void updateBlockState(boolean isProcessing, World world, BlockPos pos){
 		IBlockState i = world.getBlockState(pos);
 		TileEntity entity = world.getTileEntity(pos);
 		keepInventory = true;
-
+		
 		if(isProcessing && i.getBlock() != ModBlocks.machine_difurnace_rtg_on)
 		{
 			world.setBlockState(pos, ModBlocks.machine_difurnace_rtg_on.getDefaultState().withProperty(FACING, i.getValue(FACING)), 2);
 		}else if (!isProcessing && i.getBlock() != ModBlocks.machine_difurnace_rtg_off){
 			world.setBlockState(pos, ModBlocks.machine_difurnace_rtg_off.getDefaultState().withProperty(FACING, i.getValue(FACING)), 2);
 		}
-
+		
 		keepInventory = false;
-
+		
 		if(entity != null) {
 			entity.validate();
 			world.setTileEntity(pos, entity);
 		}
 	}
-
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
@@ -231,7 +231,7 @@ public class MachineDiFurnaceRTG extends BlockContainer {
 	            }
 	        }
 	}
-
+	
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
 		return new ItemStack(Item.getItemFromBlock(ModBlocks.machine_difurnace_rtg_off));

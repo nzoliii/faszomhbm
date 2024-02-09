@@ -27,7 +27,7 @@ public class EnchantmentUtil {
 		if(stack.getEnchantmentTagList().tagCount() == 0)
 			stack.getTagCompound().removeTag("ench");
 	}
-	
+
 	/**
 	 * Removes an amount of experience from a player and updates their level
 	 * @param entityPlayer the player to remove experience from

@@ -28,7 +28,7 @@ public class MachineExcavator extends BlockDummyable {
 		if(meta >= 6) return new TileEntityProxyCombo(false, true, true);
 		return null;
 	}
-
+	
 	@Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         return standardOpenBehavior(world, pos.getX(), pos.getY(), pos.getZ(), player, 0);
@@ -54,7 +54,7 @@ public class MachineExcavator extends BlockDummyable {
 		x += dir.offsetX * o;
 		y += dir.offsetY * o;
 		z += dir.offsetZ * o;
-
+		
 		return MultiblockHandlerXR.checkSpace(world, x, y, z, getDimensions(), x, y, z, dir);
 	}
 
@@ -69,7 +69,7 @@ public class MachineExcavator extends BlockDummyable {
 		MultiblockHandlerXR.fillSpace(world, x, y, z, new int[] {-1, 3, 3, -2, 3, -2}, this, dir);
 		MultiblockHandlerXR.fillSpace(world, x, y, z, new int[] {-1, 3, 3, -2, -2, 3}, this, dir);
 		MultiblockHandlerXR.fillSpace(world, x, y, z, new int[] {-1, 3, -2, 3, 3, 3}, this, dir);
-
+		
 		ForgeDirection rot = dir.getRotation(ForgeDirection.UP);
 		this.makeExtra(world, x + dir.offsetX * 3 + rot.offsetX, y + 1, z + dir.offsetZ * 3 + rot.offsetZ);
 		this.makeExtra(world, x + dir.offsetX * 3 - rot.offsetX, y + 1, z + dir.offsetZ * 3 - rot.offsetZ);

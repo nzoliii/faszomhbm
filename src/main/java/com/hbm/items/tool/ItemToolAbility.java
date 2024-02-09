@@ -12,9 +12,11 @@ import com.google.common.collect.Sets;
 import com.hbm.handler.ToolAbility;
 import com.hbm.handler.ToolAbility.SilkAbility;
 import com.hbm.handler.WeaponAbility;
+import com.hbm.util.I18nUtil;
 import com.hbm.items.ModItems;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.blocks.generic.BlockBedrockOre;
+import com.hbm.blocks.generic.BlockBedrockOreTE;
 
 import api.hbm.item.IDepthRockTool;
 import net.minecraft.block.Block;
@@ -183,7 +185,7 @@ public class ItemToolAbility extends ItemTool implements IItemAbility, IDepthRoc
 	}
 
 	public static boolean isForbiddenBlock(Block b){
-		return (b == Blocks.BARRIER || b == Blocks.BEDROCK || b == Blocks.COMMAND_BLOCK || b == Blocks.CHAIN_COMMAND_BLOCK || b == Blocks.REPEATING_COMMAND_BLOCK || b == ModBlocks.ore_bedrock_oil || b instanceof BlockBedrockOre );
+		return (b == Blocks.BARRIER || b == Blocks.BEDROCK || b == Blocks.COMMAND_BLOCK || b == Blocks.CHAIN_COMMAND_BLOCK || b == Blocks.REPEATING_COMMAND_BLOCK || b == ModBlocks.ore_bedrock_oil || b instanceof BlockBedrockOre || b instanceof BlockBedrockOreTE );
 	}
 	
 	@Override
@@ -283,26 +285,26 @@ public class ItemToolAbility extends ItemTool implements IItemAbility, IDepthRoc
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World worldIn, List<String> list, ITooltipFlag flagIn) {
     	if(this.breakAbility.size() > 1) {
-    		list.add("Abilities: ");
+    		list.add(I18nUtil.resolveKey("tool.ability.list"));
     		
     		for(ToolAbility ability : this.breakAbility) {
     			
     			if(ability != null) {
     				
     				if(getCurrentAbility(stack) == ability)
-					list.add(" §e§l>" + ability.getFullName());
+    					list.add(" §e§l>" + ability.getFullName());
     				else
-					list.add("  §6" + ability.getFullName());
+    					list.add("  §6" + ability.getFullName());
     			}
     		}
 
-    		list.add("Right click to cycle through abilities!");
-    		list.add("Sneak-click to turn abilitty off!");
+    		list.add(I18nUtil.resolveKey("tool.ability.rightclick"));
+    		list.add(I18nUtil.resolveKey("tool.ability.shiftclick"));
     	}
     	
     	if(!this.hitAbility.isEmpty()) {
     		
-    		list.add("Weapon modifiers: ");
+    		list.add(I18nUtil.resolveKey("tool.ability.weaponlist"));
     		
     		for(WeaponAbility ability : this.hitAbility) {
 				list.add("  " + TextFormatting.RED + ability.getFullName());
@@ -310,7 +312,7 @@ public class ItemToolAbility extends ItemTool implements IItemAbility, IDepthRoc
     	}
 
     	if(this.rockBreaker){
-    		list.add("§d[Unmineable]§5 can be mined");
+    		list.add(I18nUtil.resolveKey("trait.unmineable"));
     	}
     }
     
@@ -349,9 +351,9 @@ public class ItemToolAbility extends ItemTool implements IItemAbility, IDepthRoc
     	while(getCurrentAbility(stack) != null && !getCurrentAbility(stack).isAllowed()) {
 
     		player.sendMessage(
-    				new TextComponentString("[Ability ")
+    				new TextComponentString("["+I18nUtil.resolveKey("chat.ability")+" ")
     				.appendSibling(new TextComponentTranslation(getCurrentAbility(stack).getName(), new Object[0]))
-    				.appendSibling(new TextComponentString(getCurrentAbility(stack).getExtension() + " is blacklisted!]"))
+    				.appendSibling(new TextComponentString(getCurrentAbility(stack).getExtension() + " " + I18nUtil.resolveKey("chat.blacklist") +"]"))
     				.setStyle(new Style().setColor(TextFormatting.RED)));
 
         	i++;
@@ -360,12 +362,12 @@ public class ItemToolAbility extends ItemTool implements IItemAbility, IDepthRoc
     	
     	if(getCurrentAbility(stack) != null) {
     		player.sendMessage(
-    				new TextComponentString("[Enabled ")
+    				new TextComponentString("[" + I18nUtil.resolveKey("chat.abilenabled") + " ")
     				.appendSibling(new TextComponentTranslation(getCurrentAbility(stack).getName()))
     				.appendSibling(new TextComponentString(getCurrentAbility(stack).getExtension() + "]"))
     				.setStyle(new Style().setColor(TextFormatting.YELLOW)));
     	} else {
-    		player.sendMessage(new TextComponentString(TextFormatting.GOLD + "[Tool ability deactivated]"));
+    		player.sendMessage(new TextComponentString(TextFormatting.GOLD + "[" + I18nUtil.resolveKey("chat.abildisabled") + "]"));
     	}
 
     	//Drillgon200: I hope "random.orb" referred to the experience orb sound

@@ -11,11 +11,11 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 
 public class ItemRenderWeaponFFColt extends TEISRBase {
-
+	
 	ResourceLocation main;
 	ResourceLocation hammer;
 	ResourceLocation grip;
-
+	
 	public ItemRenderWeaponFFColt(ResourceLocation main, ResourceLocation hammer, ResourceLocation grip) {
 		this.main = main;
 		this.hammer = hammer;
@@ -31,25 +31,25 @@ public class ItemRenderWeaponFFColt extends TEISRBase {
 		double s1 = 1.5D;
 		double s2 = 1.5D;
 		switch(type) {
-
+		
 		case FIRST_PERSON_LEFT_HAND:
 
 			GL11.glTranslated(1, 0.5, 0.3);
 			GL11.glScaled(s0, s0, s0);
 			GL11.glRotated(100, 0, -1, 0);
 			GL11.glRotated(25, 1, 0, 0);
-
+			
 			break;
 
 		case FIRST_PERSON_RIGHT_HAND:
-
+			
 			GL11.glTranslated(0, 0.5, 0.3);
 			GL11.glScaled(s0, s0, s0);
 			GL11.glRotated(100, 0, 1, 0);
 			GL11.glRotated(25, 1, 0, 0);
-
+			
 			break;
-
+			
 		case THIRD_PERSON_LEFT_HAND:
 		case THIRD_PERSON_RIGHT_HAND:
 
@@ -65,7 +65,7 @@ public class ItemRenderWeaponFFColt extends TEISRBase {
 
 			GL11.glRotated(90, 0, -1, 0);
 			GL11.glScaled(s2, s2, s2);
-
+			
 			break;
 		case GUI:
 
@@ -77,7 +77,7 @@ public class ItemRenderWeaponFFColt extends TEISRBase {
 
 		default: break;
 		}
-
+		
 		Minecraft.getMinecraft().renderEngine.bindTexture(main);
 		ResourceManager.ff_python.renderPart("Body");
 		ResourceManager.ff_python.renderPart("Cylinder");
@@ -85,7 +85,7 @@ public class ItemRenderWeaponFFColt extends TEISRBase {
 		ResourceManager.ff_python.renderPart("Grip");
 		Minecraft.getMinecraft().renderEngine.bindTexture(hammer);
 		ResourceManager.ff_python.renderPart("Hammer");
-
+		
 		GL11.glPopMatrix();
 	}
 }

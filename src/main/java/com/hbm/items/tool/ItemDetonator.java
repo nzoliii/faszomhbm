@@ -1,17 +1,19 @@
 package com.hbm.items.tool;
 
 import java.util.List;
-
 import org.apache.logging.log4j.Level;
 
+import com.hbm.util.I18nUtil;
 import com.hbm.config.GeneralConfig;
 import com.hbm.interfaces.IBomb;
 import com.hbm.items.ModItems;
 import com.hbm.lib.HBMSoundHandler;
 import com.hbm.main.MainRegistry;
+
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ActionResult;
@@ -35,13 +37,13 @@ public class ItemDetonator extends Item {
 	
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> list, ITooltipFlag flagIn) {
-		list.add("Shift right-click to set position,");
-		list.add("right-click to detonate!");
+		list.add(I18nUtil.resolveKey("desc.calldet1"));
+		list.add(I18nUtil.resolveKey("desc.calldet2"));
 		if(stack.getTagCompound() == null)
 		{
-			list.add("§eNo position set§r");
+			list.add("§e"+I18nUtil.resolveKey("chat.posnoset")+"§r");
 		} else {
-			list.add("§aPos set to " + stack.getTagCompound().getInteger("x") + ", " + stack.getTagCompound().getInteger("y") + ", " + stack.getTagCompound().getInteger("z")+"§r");
+			list.add(TextFormatting.GREEN + I18nUtil.resolveKey("chat.possetxyz", stack.getTagCompound().getInteger("x"), stack.getTagCompound().getInteger("y"), stack.getTagCompound().getInteger("z"))+"§r");
 		}
 	}
 	
@@ -61,7 +63,7 @@ public class ItemDetonator extends Item {
 			
 			if(world.isRemote)
 			{
-				player.sendMessage(new TextComponentTranslation("§a[Position set]§r"));
+				player.sendMessage(new TextComponentTranslation(TextFormatting.GREEN + "[" + I18nUtil.resolveKey("chat.posset") + "]"+"§r"));
 			}
 			
 	        world.playSound(null, player.posX, player.posY, player.posZ, HBMSoundHandler.techBoop, SoundCategory.AMBIENT, 1.0F, 1.0F);
@@ -77,7 +79,7 @@ public class ItemDetonator extends Item {
 		if(stack.getTagCompound() == null)
 		{
 			if(world.isRemote)
-				player.sendMessage(new TextComponentTranslation("§c[Error]: Position not set.§r"));
+				player.sendMessage(new TextComponentTranslation("§c"+I18nUtil.resolveKey("chat.posnoseterror")+"§r"));
 		} else {
 			 int x = stack.getTagCompound().getInteger("x");
 			 int y = stack.getTagCompound().getInteger("y");
@@ -96,12 +98,12 @@ public class ItemDetonator extends Item {
 				}
 				if(world.isRemote)
 				{
-		    		player.sendMessage(new TextComponentTranslation("§2[Detonated]§r"));
+		    		player.sendMessage(new TextComponentTranslation(TextFormatting.DARK_GREEN+"["+I18nUtil.resolveKey("chat.detonated")+"]"+"§r"));
 				}
 			 } else {
 				if(world.isRemote)
 				{
-					player.sendMessage(new TextComponentTranslation("§c[Error]: Target incompatible or too far away.§r"));
+					player.sendMessage(new TextComponentTranslation("§c"+I18nUtil.resolveKey("chat.postoofarerror")+"§r"));
 				}
 			 }
 		}

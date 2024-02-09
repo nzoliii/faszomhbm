@@ -4,13 +4,13 @@ import java.util.List;
 import java.util.Random;
 
 import com.hbm.items.ModItems;
+import com.hbm.util.I18nUtil;
 import com.hbm.world.FWatz;
 import com.hbm.world.FactoryAdvanced;
 import com.hbm.world.FactoryTitanium;
 import com.hbm.world.ParticleAccelerator;
 import com.hbm.world.NuclearReactor;
 import com.hbm.world.Watz;
-import com.hbm.world.dungeon.Ruin001;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
@@ -36,7 +36,7 @@ public class ItemWandS extends Item {
 	
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add("Creative-only item");
+		tooltip.add(I18nUtil.resolveKey("desc.creative"));
 		tooltip.add("\"Instant structures for everyone!\"");
 		tooltip.add("(Cycle with shift-right click,");
 		tooltip.add("spawn structures with right click!)");
@@ -61,9 +61,6 @@ public class ItemWandS extends Item {
 				break;
 			case 5:
 				tooltip.add("Structure: Singularity-Anti-Fusion-Experiment Reactor");
-				break;
-			case 6:
-				tooltip.add("Ruins 001");
 				break;
 			}
 		}
@@ -104,13 +101,10 @@ public class ItemWandS extends Item {
 				new ParticleAccelerator().generate(world, rand, new BlockPos(pos.getX(), up ? pos.getY()-5 : pos.getY(), pos.getZ()));
 				break;
 			case 4:
-			new Watz().generateReactor(world, rand, new BlockPos(pos.getX(), up ? pos.getY() - 12 : pos.getY(), pos.getZ()));
+				new Watz().generateReactor(world, rand, new BlockPos(pos.getX(), up ? pos.getY() - 12 : pos.getY(), pos.getZ()));
 				break;
 			case 5:
 				new FWatz().generateHull(world, rand, new BlockPos(pos.getX(), up ? pos.getY() - 18 : pos.getY(), pos.getZ()));
-				break;
-			case 6:
-				new Ruin001().generate(world, rand, new BlockPos(pos.getX(), up ? pos.getY() - 18 : pos.getY(), pos.getZ()));
 				break;
 			}
 			
@@ -134,7 +128,7 @@ public class ItemWandS extends Item {
 				int i = stack.getTagCompound().getInteger("building");
 				i++;
 				stack.getTagCompound().setInteger("building", i);
-				if(i >= 7) {
+				if(i >= 6) {
 					stack.getTagCompound().setInteger("building", 0);
 				}
 				
@@ -159,9 +153,6 @@ public class ItemWandS extends Item {
 						break;
 					case 5:
 						player.sendMessage(new TextComponentTranslation("Set Structure: Singularity-Anti-Fusion-Experiment Reactor"));
-						break;
-					case 6:
-						player.sendMessage(new TextComponentTranslation("Set Structure: Ruins 01"));
 						break;
 					default:
 						player.sendMessage(new TextComponentTranslation("Set Structure: Titanium Factory"));

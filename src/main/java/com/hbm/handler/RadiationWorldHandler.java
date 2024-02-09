@@ -40,7 +40,7 @@ public class RadiationWorldHandler {
 			if(GeneralConfig.enableDebugMode) {
 				MainRegistry.logger.info("[Debug] Starting world destruction processing");
 			}
-			
+
 			Collection<RadPocket> activePockets = RadiationSystemNT.getActiveCollection(world);
 			if(activePockets.size() == 0)
 				return;
@@ -69,9 +69,14 @@ public class RadiationWorldHandler {
 									if(bblock == Blocks.GRASS) {
 										world.setBlockState(pos, ModBlocks.waste_earth.getDefaultState());
 									
-									} else if(bblock == Blocks.DIRT) {
+									} else if(bblock == Blocks.DIRT || bblock == Blocks.FARMLAND) {
 										world.setBlockState(pos, ModBlocks.waste_dirt.getDefaultState());
-
+									} else if(bblock == Blocks.SANDSTONE) {
+										world.setBlockState(pos, ModBlocks.waste_sandstone.getDefaultState());
+									} else if(bblock == Blocks.RED_SANDSTONE) {
+										world.setBlockState(pos, ModBlocks.waste_sandstone_red.getDefaultState());
+									} else if(bblock == Blocks.HARDENED_CLAY || bblock == Blocks.STAINED_HARDENED_CLAY) {
+										world.setBlockState(pos, ModBlocks.waste_terracotta.getDefaultState());
 									} else if(bblock == Blocks.SAND) {
 										BlockSand.EnumType meta = b.getValue(BlockSand.VARIANT);
 										if(world.rand.nextInt(60) == 0) {
@@ -114,11 +119,12 @@ public class RadiationWorldHandler {
 				}
 				itr ++;
 			}
+			if(GeneralConfig.enableDebugMode) {
+				MainRegistry.logger.info("[Debug] Finished world destruction processing");
+			}
 			return;
 		}
-		if(GeneralConfig.enableDebugMode) {
-			MainRegistry.logger.info("[Debug] Finished world destruction processing");
-		}
+		
 		WorldServer serv = (WorldServer)world;
 
 		RadiationSavedData data = RadiationSavedData.getData(serv);
@@ -166,6 +172,12 @@ public class RadiationWorldHandler {
 							} else {
 								world.setBlockState(pos, meta == BlockSand.EnumType.SAND ? ModBlocks.waste_sand.getDefaultState() : ModBlocks.waste_sand_red.getDefaultState());
 							}
+						} else if(bblock == Blocks.SANDSTONE) {
+							world.setBlockState(pos, ModBlocks.waste_sandstone.getDefaultState());
+						} else if(bblock == Blocks.RED_SANDSTONE) {
+							world.setBlockState(pos, ModBlocks.waste_sandstone_red.getDefaultState());
+						} else if(bblock == Blocks.HARDENED_CLAY || bblock == Blocks.STAINED_HARDENED_CLAY) {
+										world.setBlockState(pos, ModBlocks.waste_terracotta.getDefaultState());
 						} else if(bblock == Blocks.GRAVEL) {
 							world.setBlockState(pos, ModBlocks.waste_gravel.getDefaultState());
 

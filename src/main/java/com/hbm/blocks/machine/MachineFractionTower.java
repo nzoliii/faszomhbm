@@ -78,8 +78,8 @@ public class MachineFractionTower extends BlockDummyable implements ILookOverlay
 						player.sendMessage(new TextComponentString(TextFormatting.YELLOW + "=== FRACTIONING TOWER Y:" + pos[1] + " ==="));
 
 						for(int i = 0; i < frac.tanks.length; i++)
-						player.sendMessage(new TextComponentTranslation(frac.types[i].getUnlocalizedName()).appendSibling(new TextComponentString(": " + frac.tanks[i].getFluidAmount() + "/" + frac.tanks[i].getCapacity() + "mB")));
-				}
+							player.sendMessage(new TextComponentTranslation(frac.types[i].getUnlocalizedName()).appendSibling(new TextComponentString(": " + frac.tanks[i].getFluidAmount() + "/" + frac.tanks[i].getCapacity() + "mB")));
+					}
 				} else {
 					
 					if(world.getTileEntity(new BlockPos(pos[0], pos[1] - 3, pos[2])) instanceof TileEntityMachineFractionTower) {

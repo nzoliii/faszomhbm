@@ -25,23 +25,23 @@ public class GUIMachineExcavator extends GuiInfoContainer {
 
 	public GUIMachineExcavator(InventoryPlayer inventory, TileEntityMachineExcavator tile) {
 		super(new ContainerMachineExcavator(inventory, tile));
-
+		
 		this.drill = tile;
-
+		
 		this.xSize = 242;
 		this.ySize = 204;
 	}
-
+	
 	@Override
 	public void drawScreen(int mouseX, int mouseY, float f) {
 		super.drawScreen(mouseX, mouseY, f);
-
+		
 		this.drawCustomInfoStat(mouseX, mouseY, guiLeft + 7, guiTop + 16, 18, 18, mouseX, mouseY, new String[] { "Main On/Off Lever" });
 		this.drawCustomInfoStat(mouseX, mouseY, guiLeft + 31, guiTop + 16, 18, 18, mouseX, mouseY, new String[] { "Silktouch" });
 		this.drawCustomInfoStat(mouseX, mouseY, guiLeft + 55, guiTop + 16, 18, 18, mouseX, mouseY, new String[] { "Shred ores" });
 		this.drawCustomInfoStat(mouseX, mouseY, guiLeft + 79, guiTop + 16, 18, 18, mouseX, mouseY, new String[] { "Vein mining" });
 		this.drawCustomInfoStat(mouseX, mouseY, guiLeft + 103, guiTop + 16, 18, 18, mouseX, mouseY, new String[] { "Construct walls" });
-
+		
 		this.drawElectricityInfo(this, mouseX, mouseY, guiLeft + 220, guiTop + 17, 16, 52, drill.getPower(), drill.maxPower);
 		FFUtils.renderTankInfo(this, mouseX, mouseY, guiLeft + 202, guiTop + 17, 16, 52, drill.tank, drill.fluidType);
 		super.renderHoveredToolTip(mouseX, mouseY);
@@ -56,7 +56,7 @@ public class GUIMachineExcavator extends GuiInfoContainer {
 		super.mouseClicked(x, y, mouseButton);
 
 		String toggle = null;
-
+		
 		if(isInBox(x, y, 6, 6 + 20, 42, 42 + 40)) toggle = "drill";
 		if(isInBox(x, y, 30, 30 + 20, 42, 42 + 40)) toggle = "silktouch";
 		if(isInBox(x, y, 54, 54 + 20, 42, 42 + 40)) toggle = "crusher";
@@ -84,18 +84,18 @@ public class GUIMachineExcavator extends GuiInfoContainer {
 		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, 242, 96);
 		drawTexturedModalRect(guiLeft + 33, guiTop + 104, 33, 104, 176, 100);
-
+		
 		int i = (int) (drill.getPower() * 52 / drill.getMaxPower());
 		drawTexturedModalRect(guiLeft + 220, guiTop + 70 - i, 229, 156 - i, 16, i);
-
+		
 		if(drill.getPower() > drill.getPowerConsumption()) {
 			drawTexturedModalRect(guiLeft + 224, guiTop + 4, 239, 156, 9, 12);
 		}
-
+		
 		if(drill.getInstalledDrill() == null && System.currentTimeMillis() % 1000 < 500) {
 			drawTexturedModalRect(guiLeft + 171, guiTop + 74, 209, 154, 18, 18);
 		}
-
+		
 		if(drill.enableDrill) {
 			drawTexturedModalRect(guiLeft + 6, guiTop + 42, 209, 114, 20, 40);
 			if(drill.getInstalledDrill() != null && drill.getPower() >= drill.getPowerConsumption())
@@ -111,26 +111,26 @@ public class GUIMachineExcavator extends GuiInfoContainer {
 			else if(System.currentTimeMillis() % 1000 < 500)
 				drawTexturedModalRect(guiLeft + 35, guiTop + 5, 219, 104, 10, 10);
 		}
-
+		
 		if(drill.enableCrusher) {
 			drawTexturedModalRect(guiLeft + 54, guiTop + 42, 209, 114, 20, 40);
 			drawTexturedModalRect(guiLeft + 59, guiTop + 5, 209, 104, 10, 10);
 		}
-
+		
 		if(drill.enableVeinMiner) {
 			drawTexturedModalRect(guiLeft + 78, guiTop + 42, 209, 114, 20, 40);
 			if(drill.canVeinMine())
 				drawTexturedModalRect(guiLeft + 83, guiTop + 5, 209, 104, 10, 10);
 			else if(System.currentTimeMillis() % 1000 < 500)
 				drawTexturedModalRect(guiLeft + 83, guiTop + 5, 219, 104, 10, 10);
-
+			
 		}
 
 		if(drill.enableWalling) {
 			drawTexturedModalRect(guiLeft + 102, guiTop + 42, 209, 114, 20, 40);
 			drawTexturedModalRect(guiLeft + 107, guiTop + 5, 209, 104, 10, 10);
 		}
-
+	
 		FFUtils.drawLiquid(drill.tank, guiLeft, guiTop, zLevel, 16, 52, 202, 98);
 	}
 }
