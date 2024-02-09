@@ -1,4 +1,4 @@
-<br><img src="static_banners/title.png" alt="drawing" width="512"/>
+<br><img src="static_banners/title.png" alt="main_title" width="512"/>
 
 This mod is about building nuclear reactors, rockets, nukes, weapons and bunkers.<br>
 It is based on the awesome work of Alcater, Drillgon and HBM.<br>
@@ -14,7 +14,7 @@ The licence for this project can be found in the LICENSE.MD file<br>
 
 <br>
 <br>
-<br><img src="static_banners/what_have_i_done.png" alt="drawing" width="512"/>
+<br><img src="static_banners/what_have_i_done.png" alt="what_have_i_done_title" width="512"/>
 
 This mod doesn't aim to add any useful features, just some stuff that me and my friends found funny.<br>
 
@@ -40,13 +40,14 @@ This mod doesn't aim to add any useful features, just some stuff that me and my 
 
 <br>
 <br>
-<br><img src="static_banners/rockets.png" alt="drawing" width="720"/><br>
-<br><img src="static_banners/fallout.png" alt="drawing" width="720"/><br>
+<br><img src="static_banners/pictures.png" alt="pictures_title_image" width="320"/><br>
+<br><img src="static_banners/rockets.png" alt="rockets_image" width="720"/><br>
+<br><img src="static_banners/fallout.png" alt="fallout_image" width="720"/><br>
 
 
 <br>
 <br>
-<br><img src="static_banners/credits.png" alt="drawing" width="256"/><br>
+<br><img src="static_banners/credits.png" alt="credits_title_image" width="256"/><br>
 
 This mod is forked from [Alcater's](https://github.com/Alcatergit/Hbm-s-Nuclear-Tech-GIT) fork
 which is forked from the fork made by [TheOriginalGolem](https://github.com/TheOriginalGolem/Hbm-s-Nuclear-Tech-GIT)
@@ -64,7 +65,7 @@ which is ported from the original mod made by [HBMTheBobcat](https://github.com/
 
 <br>
 <br>
-<br><img src="static_banners/build_guide.png" alt="drawing" width="384"/>
+<br><img src="static_banners/build_guide.png" alt="build_guide_title" width="384"/>
 
 Download the repository, open a shell prompt in that folder, then type the following:
 
