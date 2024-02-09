@@ -66,7 +66,7 @@ which is ported from the original mod made by [HBMTheBobcat](https://github.com/
 <br>
 <br><img src="static_banners/build_guide.png" alt="drawing" width="384"/>
 
-Download the repository, then open a shell prompt in that folder, then type the following:
+Download the repository, open a shell prompt in that folder, then type the following:
 
 `.\gradlew build`
 
