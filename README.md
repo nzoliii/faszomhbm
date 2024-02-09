@@ -40,14 +40,14 @@ This mod doesn't aim to add any useful features, just some stuff that me and my 
 
 <br>
 <br>
-<br><img src="static_banners/pictures.png" alt="pictures_title_image" width="320"/><br>
-<br><img src="static_banners/rockets.png" alt="rockets_image" width="720"/><br>
-<br><img src="static_banners/fallout.png" alt="fallout_image" width="720"/><br>
+<br><img src="static_banners/pictures.png" alt="pictures_title_image" width="320"/>
+<br><img src="static_banners/rockets.png" alt="rockets_image" width="720"/>
+<br><img src="static_banners/fallout.png" alt="fallout_image" width="720"/>
 
 
 <br>
 <br>
-<br><img src="static_banners/credits.png" alt="credits_title_image" width="256"/><br>
+<br><img src="static_banners/credits.png" alt="credits_title_image" width="256"/>
 
 This mod is forked from [Alcater's](https://github.com/Alcatergit/Hbm-s-Nuclear-Tech-GIT) fork
 which is forked from the fork made by [TheOriginalGolem](https://github.com/TheOriginalGolem/Hbm-s-Nuclear-Tech-GIT)
