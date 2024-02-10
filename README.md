@@ -2,15 +2,14 @@
 
 This mod is about building nuclear reactors, rockets, nukes, weapons and bunkers.<br>
 It is based on the awesome work of Alcater, Drillgon and HBM.<br>
+It features an expansive tech tree of various processing and utility machines, craftable bombs and missiles, guns, and abandoned structures to explore.<br>
 Due to the amount and complexity of the recipes of this mod, JEI is strongly recommended.<br>
 
-This mod is, as the name implies, all about technology, atomic science and nuclear weapons.<br>
-It features an expansive tech tree of various processing and utility machines, craftable bombs and missiles, guns, and abandoned structures to explore.<br>
 No longer are nukes just green TNT blocks - you will have to synthesize new types of explosives and enrich uranium before you can send nuclear missiles towards your pals.<br>
 
 This is the edited version of Alcater's custom version of HBM's NTM mod.<br>
-The latest version can be found on Curseforge, Modrinth, and here but you have to build it though.<br>
-The licence for this project can be found in the LICENSE.MD file<br>
+The latest version can be found on Curseforge, and here but you have to build it though.<br>
+The licence for this project can be found in the LICENSE.MD file.<br>
 
 <br>
 <br>
@@ -23,26 +22,26 @@ This mod doesn't aim to add any useful features, just some stuff that me and my 
 > - Edited mcmod.info so its easier to read.
 > - Edited pack.mcmeta
 > - Edited Logo picture.
-> - Replaced FaszomHBM Bombs background with the Hiroshima Fat Man bomb.
+> - Edited en_US.lang file to fix some grammatical mistakes, but there are still some.
 > - Edited coal dust death message.
 > - Edited asbestos death message.
 > - Edited meteor death message.
 > - Edited radiation death message.
+> - Replaced FaszomHBM Bombs background with the Hiroshima Fat Man bomb.
+> - Replaced cough and vomit sounds to my friend's sounds.
 > - Renamed "Balefire" to "Béltűz"
 > - Renamed all "Corium" to "Faszom-Corium"
 > - Renamed "Baleonitite" to "Baletonit" because we kept mispronouncing it.
-> - Replaced cough and vomit sounds to my friend's sounds.
 > - Added song "Where Is My Mind" by Pixies.
 > - Added song "Where Is My Mind Retrowave Remix" by The Motion.
 > - Added song "The Perfect Girl" by Mareux.
 > - Added song "The Perfect Girl Retrowave Remix" by The Motion.
-> - Edited en_US.lang file to fix some grammatical mistakes, but there are still some.
 
 <br>
 <br>
 <br><img src="static_banners/pictures.png" alt="pictures_title_image" width="320"/>
 <br><img src="static_banners/rockets.png" alt="rockets_image" width="720"/>
-<br><img src="static_banners/fallout.png" alt="fallout_image" width="720"/>
+<br><img src="static_banners/fallout.png" alt="fallout_image" width="720"/><br>
 
 
 <br>
@@ -50,7 +49,7 @@ This mod doesn't aim to add any useful features, just some stuff that me and my 
 <br><img src="static_banners/credits.png" alt="credits_title_image" width="256"/>
 
 This mod is forked from [Alcater's](https://github.com/Alcatergit/Hbm-s-Nuclear-Tech-GIT) fork
-which is forked from the fork made by [TheOriginalGolem](https://github.com/TheOriginalGolem/Hbm-s-Nuclear-Tech-GIT)
+which is forked from the fork made by [TheOriginalGolem](https://github.com/TheOriginalGolem/Hbm-s-Nuclear-Tech-GIT)<br>
 which is forked from the port made by [Drillgon200](https://github.com/Drillgon200/Hbm-s-Nuclear-Tech-GIT)
 which is ported from the original mod made by [HBMTheBobcat](https://github.com/HbmMods/Hbm-s-Nuclear-Tech-GIT).
 
@@ -62,6 +61,9 @@ which is ported from the original mod made by [HBMTheBobcat](https://github.com/
 **grangerave, rodolphito, mexikoedi:** Log spam fix.<br>
 **Crowbar Collective:** Gluon Gun sounds.<br>
 **70000HP:** MIRV and configs.<br>
+**Mareux:** Music.<br>
+**Pixies:** Music.<br>
+**The Motion:** Music.<br>
 
 <br>
 <br>

@@ -204,6 +204,8 @@
     "entity.ufoBeam": {"category": "hostile", "sounds": [{"name": "hbm:entity/ufoBeamShort", "stream": false}]},
     "entity.ufoBlast": {"category": "hostile", "sounds": [{"name": "hbm:entity/ufoBlast", "stream": false}]},
     "entity.vomit": {"category": "player", "sounds": [{"name": "hbm:player/vomit", "stream": false}]},
+    "entity.diarrhea": {"category": "player", "sounds": [{"name": "hbm:player/diarrhea", "stream": false}]},
+    "ameno": {"category": "hostile", "sounds": [{"name": "hbm:ameno", "stream": false}]},
     "player.cough": {"category": "player", "sounds": ["hbm:player/cough1", "hbm:player/cough2", "hbm:player/cough3", "hbm:player/cough4"]},
     
     "step.metal": {"category": "player", "sounds": [{"name": "hbm:footsteps/metal", "stream": false}]},

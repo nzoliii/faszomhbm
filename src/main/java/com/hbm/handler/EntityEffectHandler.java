@@ -41,6 +41,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
+import javax.swing.JOptionPane;
 
 public class EntityEffectHandler {
 	public static void onUpdate(EntityLivingBase entity) {
@@ -150,6 +151,7 @@ public class EntityEffectHandler {
 				PacketDispatcher.wrapper.sendToAllAround(new AuxParticlePacketNT(nbt, 0, 0, 0),  new TargetPoint(entity.dimension, entity.posX, entity.posY, entity.posZ, 25));
 				
 				if((world.getTotalWorldTime() + r1200) % 1200 == 1) {
+					JOptionPane.showMessageDialog(null, "Player should vomit right now after pressing OK", "EntityEffectHandler.java - Line 155", JOptionPane.INFORMATION_MESSAGE);
 					world.playSound(null, ix, iy, iz, HBMSoundHandler.vomit, SoundCategory.NEUTRAL, 1.0F, 1.0F);
 					entity.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 60, 19));
 				}
@@ -302,6 +304,7 @@ public class EntityEffectHandler {
 					PacketDispatcher.wrapper.sendToAllAround(new AuxParticlePacketNT(nbt, 0, 0, 0),  new TargetPoint(entity.dimension, entity.posX, entity.posY, entity.posZ, 25));
 					
 					if((contagion + entity.getEntityId()) % 200 == 19)
+						JOptionPane.showMessageDialog(null, "Player should vomit right now after pressing OK", "EntityEffectHandler.java - Line 308", JOptionPane.INFORMATION_MESSAGE);
 						world.playSound(null, entity.posX, entity.posY, entity.posZ, HBMSoundHandler.vomit, SoundCategory.PLAYERS, 1.0F, 1.0F);
 				}
 				
