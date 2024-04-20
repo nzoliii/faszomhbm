@@ -4,7 +4,7 @@ public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";
 	public static final String VERSION = "2.1-BETA";
-	public static final String CHANGELOG = "§f- New vomit sounds. \n - New cough sounds. \n - Dark UI (might revert, gotta ask opinions). \n - Custom paintings (replacing default ones). \n - Custom main menu (W.I.P.). \n - Fixed grammatical errors in en-us.lang. \n - Renamed 'screm' to 'sceam' in the files (it was annoying to see). \n - Credits update in mcmod.info file. \n - More memes.";
+	public static final String CHANGELOG = "§f - New vomit sounds. \n - New cough sounds. \n - Dark UI (might revert, gotta ask opinions). \n - Custom paintings (replacing default ones). \n - Custom main menu (W.I.P.). \n - Fixed grammatical errors in en-us.lang. \n - Renamed 'screm' to 'sceam' in the files (it was annoying to see). \n - Credits update in mcmod.info file. \n - More memes.";
 	//HBM's Beta Naming Convention:
 	//V T (X)
 	//V -> next release version
