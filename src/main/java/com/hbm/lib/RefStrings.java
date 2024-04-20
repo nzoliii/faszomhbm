@@ -1,12 +1,10 @@
 package com.hbm.lib;
 
-// TODO: Fix tab color names in creative menu, also fix armor slot texture, take it from contract.
-
 public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";
-	public static final String VERSION = "2.0.2";
-	public static final String CHANGELOG = "§f2.0 Changes:\n§f- Updated base to NTM Extended 2.0.2.\n§f- Rewrote FaszomHBM code.\n§f2.0.1 Changes:\n§f- Minor content update.";
+	public static final String VERSION = "2.2-BETA";
+	public static final String CHANGELOG = "§f- New vomit sounds.\n- New cough sounds.\n - Dark UI (might revert, gotta ask opinions).\n- Custom paintings (replacing default ones).\n- Custom main menu (W.I.P.).\n- Fixed grammatical errors in en-us.lang.\n- Renamed 'screm' to 'sceam' in the files (it was annoying to see).\n- Credits update in mcmod.info file.\n- More memes.";
 	//HBM's Beta Naming Convention:
 	//V T (X)
 	//V -> next release version
