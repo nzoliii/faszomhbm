@@ -1,0 +1,13 @@
+container.chest=§fÁrku
+container.inventory=§fLohku
+entity.Horse.name=§fHeasta
+entity.Villager.farmer=§fBoanda
+entity.Villager.fisherman=§fGuollebivdi
+entity.Villager.librarian=§fGirjerájusbargi
+itemGroup.combat=§fDáistaleapmi
+itemGroup.food=§fBorramuš
+itemGroup.materials=§fMateriálat
+itemGroup.misc=§fIešguđetlágan
+itemGroup.search=§fOhcat Diŋggat
+itemGroup.tools=§fReaiddut
+itemGroup.transportation=§fFievrrádus

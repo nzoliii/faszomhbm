@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "hbm:items/record_o7_violin_trap_type_beat"
+	}
+}
