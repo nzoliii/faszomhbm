@@ -41,7 +41,7 @@ public class EntityTom extends EntityThrowable implements IConstantRenderer {
 			world.playSound(null, posX, posY, posZ, HBMSoundHandler.chime, SoundCategory.HOSTILE, 10000, 1.0F);
 
 			for(EntityPlayer player : world.playerEntities) {
-				player.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 10 * 20, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 60 * 20, 0));
 			}
 		}
         
