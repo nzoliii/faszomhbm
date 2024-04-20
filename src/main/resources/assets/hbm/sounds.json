@@ -211,10 +211,10 @@
     "entity.megaquacc": {"category": "hostile", "sounds": [{"name": "hbm:entity/megaquacc", "stream": false}]},
     "entity.ufoBeam": {"category": "hostile", "sounds": [{"name": "hbm:entity/ufoBeamShort", "stream": false}]},
     "entity.ufoBlast": {"category": "hostile", "sounds": [{"name": "hbm:entity/ufoBlast", "stream": false}]},
-    "entity.vomit": {"category": "player", "sounds": ["hbm:player/vomit_andor", "hbm:player/vomit_andor2", "hbm:player/vomit_andor3", "hbm:player/vomit_andor4", "hbm:player/vomit_andor5", "hbm:player/vomit_andor6", "hbm:player/vomit_andor7", "hbm:player/vomit_andor8", "hbm:player/vomit_gyula"]},
+    "entity.vomit": {"category": "player", "sounds": ["hbm:player/vomit_andor", "hbm:player/vomit_andor2", "hbm:player/vomit_andor3", "hbm:player/vomit_andor4", "hbm:player/vomit_andor5", "hbm:player/vomit_gyula"]},
     "entity.diarrhea": {"category": "player", "sounds": [{"name": "hbm:player/diarrhea", "stream": false}]},
     "ameno": {"category": "hostile", "sounds": [{"name": "hbm:ameno", "stream": false}]},
-    "player.cough": {"category": "player", "sounds": ["hbm:player/cough1", "hbm:player/cough2", "hbm:player/cough3", "hbm:player/cough4"]},
+    "player.cough": {"category": "player", "sounds": ["hbm:player/cough1", "hbm:player/cough2", "hbm:player/cough3", "hbm:player/cough4", "hbm:player/cough5", "hbm:player/cough6"]},
     
     "step.metal": {"category": "player", "sounds": [{"name": "hbm:footsteps/metal", "stream": false}]},
     "step.iron_jump": {"category": "player", "sounds": [{"name": "hbm:footsteps/iron_jump", "stream": false}]},
