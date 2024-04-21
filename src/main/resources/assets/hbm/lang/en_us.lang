@@ -5037,6 +5037,12 @@ item.record.o7_relaxed_vibes.desc=oohseven - Relaxed Vibes
 item.record.o7_violin_trap_type_beat.desc=oohseven - Violin Trap Type Beat
 item.record.o7_trumpet_trap_type_beat.desc=oohseven - Trumpet Trap Type Beat
 
+item.record.o7.supersecretsong1=i will
+item.record.o7.supersecretsong2=add theese
+item.record.o7.supersecretsong3=songs later
+item.record.o7.supersecretsong4=to hbm,
+item.record.o7.supersecretsong5=not now
+
 item.discharge.name=Discharge
 
 item.containment_box.name=Containment Box
