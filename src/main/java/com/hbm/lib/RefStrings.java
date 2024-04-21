@@ -1,7 +1,14 @@
 package com.hbm.lib;
 
-// TODO: main menu fix, ad more memes, add o7 new musics, iv bag revert
-
+// TODO: Finish main menu.
+//		 Add more memes.
+//		 Add o7's new music.
+//		 Revert IV Bag crafting recipe.
+//		 Change transition seal size by +1 block.
+//		 Fix colors due to dark menu, so make 'em brighter.
+//		 Replace options.png (dirt background)?
+//		 Add HBM wiki button in main menu lol (like in contract).
+//		 Update HBM gui to match dark mode.
 public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";

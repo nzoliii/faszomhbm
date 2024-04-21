@@ -61,3 +61,6 @@ tile.shulkerBoxRed.name=§fRed Shulker Box
 tile.shulkerBoxSilver.name=§fLight Gray Shulker Box
 tile.shulkerBoxWhite.name=§fWhite Shulker Box
 tile.shulkerBoxYellow.name=§fYellow Shulker Box
+
+recipe.toast.title=§dNew Recipes Unlocked!
+recipe.toast.description=§fCheck your recipe book
