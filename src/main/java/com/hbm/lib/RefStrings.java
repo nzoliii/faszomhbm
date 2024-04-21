@@ -6,7 +6,7 @@ public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";
 	public static final String VERSION = "2.1-BETA-CLTEST";
-	public static final String CHANGELOG = "§a+ New vomit sounds.$+ New cough sounds.$+ Dark UI (might revert, gotta ask opinions).$+ Custom paintings (replacing default ones).$+ Custom main menu (W.I.P.).$+ Added more music.$§e= Fixed grammatical errors in en_us.lang.$= Renamed 'screm' to 'scream' in the files.$= Credits update in mcmod.info file.$- More memes.$= Some directories renamed.$§e- Gerald achievements and sounds replaced.$§c- IV Bag crafting recipe reverted to insulator one.";
+	public static final String CHANGELOG = "§a+ New vomit sounds.$§a+ New cough sounds.$§a+ Dark UI (might revert, gotta ask opinions).$§a+ Custom paintings (replacing default ones).$§a+ Custom main menu (W.I.P.).$§a+ Added more music.$§a+ More memes.$§e= Fixed grammatical errors in en_us.lang.$§e= Renamed 'screm' to 'scream' in the files.$§e= Credits update in mcmod.info file.$§e= Some directories renamed.$§e= Gerald achievements and sounds replaced.$§c- IV Bag crafting recipe reverted to insulator one.";
 	//HBM's Beta Naming Convention:
 	//V T (X)
 	//V -> next release version
