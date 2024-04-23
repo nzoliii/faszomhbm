@@ -146,7 +146,7 @@ public class CableDiode extends BlockContainer implements IEnergyConnectorBlock,
 		TileEntityDiode diode = (TileEntityDiode) te;
 		
 		List<String> text = new ArrayList();
-		text.add("Max.: " + Library.getShortNumber(diode.getMaxPower()*20) + "HE/s");
+		text.add("Max.: " + Library.getShortNumber(diode.getMaxPower()*200000) + "HE/s");
 		text.add("Priority: " + diode.priority.name());
 		
 		ILookOverlay.printGeneric(event, I18nUtil.resolveKey(getUnlocalizedName() + ".name"), 0xffff00, 0x404000, text);

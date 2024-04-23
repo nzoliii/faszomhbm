@@ -1,15 +1,16 @@
 package com.hbm.lib;
 
-// TODO: Finish main menu.
-//		 Add o7's new music.
-//		 Revert IV Bag crafting recipe.
-//		 Add HBM wiki button in main menu lol (like in contract).
-//		 Revert tab_items and tab_nuke
+// TODO for update 2.1:
+//		Custom main menu
+//		Add o7's new music
+//		Dark UI as a resource pack
+//		Diarrhea mechanics finally?
+
 public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";
-	public static final String VERSION = "2.1-BETA";
-	public static final String CHANGELOG = "§a+ New vomit sounds.$§a+ New cough sounds.$§a+ Custom main menu (W.I.P.).$§a+ Added more music.$§a+ More memes.$§e= Fixed grammatical errors in en_us.lang.$§e= Renamed 'screm' to 'scream' in the files.$§e= Credits update in mcmod.info file.$§e= Some directories renamed.$§e= Texture update.$§e= Gerald achievements and sounds replaced.$§e= Texture update.$§a+ Added old insulator IV Bag crafting recipe.";
+	public static final String VERSION = "2.0.3";
+	public static final String CHANGELOG = "§a+ New vomit sounds.$§a+ New cough sounds.$§a+ Added more music.$§a+ More memes.$§a+ Added old insulator IV Bag crafting recipe.$§e= Fixed grammatical errors in en_us.lang.$§e= Renamed 'screm' to 'scream' in the files.$§e= Credits update in mcmod.info file.$§e= Some directories renamed.$§e= Gerald achievements and sounds replaced.$§e= Power diode max limit changed.";
 
 	//HBM's Beta Naming Convention:
 	//V T (X)
