@@ -1,19 +1,15 @@
 package com.hbm.lib;
 
 // TODO: Finish main menu.
-//		 Add more memes.
 //		 Add o7's new music.
 //		 Revert IV Bag crafting recipe.
-//		 Change transition seal size by +1 block.
-//		 Fix colors due to dark menu, so make 'em brighter.
-//		 Replace options.png (dirt background)?
 //		 Add HBM wiki button in main menu lol (like in contract).
-//		 Update HBM gui to match dark mode.
+//		 Revert tab_items and tab_nuke
 public class RefStrings {
 	public static final String MODID = "hbm";
 	public static final String NAME = "Faszom HBM";
 	public static final String VERSION = "2.1-BETA";
-	public static final String CHANGELOG = "§a+ New vomit sounds.$§a+ New cough sounds.$§a+ Dark UI (might revert, gotta ask opinions).$§a+ Custom paintings (replacing default ones).$§a+ Custom main menu (W.I.P.).$§a+ Added more music.$§a+ More memes.$§e= Fixed grammatical errors in en_us.lang.$§e= Renamed 'screm' to 'scream' in the files.$§e= Credits update in mcmod.info file.$§e= Some directories renamed.$§e= Texture update.$§e= Gerald achievements and sounds replaced.$§e= Texture update.$§e= Transition seal size changed.$§c- IV Bag crafting recipe reverted to insulator one.";
+	public static final String CHANGELOG = "§a+ New vomit sounds.$§a+ New cough sounds.$§a+ Custom main menu (W.I.P.).$§a+ Added more music.$§a+ More memes.$§e= Fixed grammatical errors in en_us.lang.$§e= Renamed 'screm' to 'scream' in the files.$§e= Credits update in mcmod.info file.$§e= Some directories renamed.$§e= Texture update.$§e= Gerald achievements and sounds replaced.$§e= Texture update.$§a+ Added old insulator IV Bag crafting recipe.";
 
 	//HBM's Beta Naming Convention:
 	//V T (X)
