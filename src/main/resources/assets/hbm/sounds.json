@@ -215,7 +215,8 @@
     "entity.diarrhea": {"category": "player", "sounds": [{"name": "hbm:player/diarrhea", "stream": false}]},
     "ameno": {"category": "hostile", "sounds": [{"name": "hbm:ameno", "stream": false}]},
     "player.cough": {"category": "player", "sounds": ["hbm:player/cough1", "hbm:player/cough2", "hbm:player/cough3", "hbm:player/cough4", "hbm:player/cough5", "hbm:player/cough6"]},
-    
+    "player.oppenheimer": {"category": "player", "sounds": ["hbm:player/oppenheimer"]},
+
     "step.metal": {"category": "player", "sounds": [{"name": "hbm:footsteps/metal", "stream": false}]},
     "step.iron_jump": {"category": "player", "sounds": [{"name": "hbm:footsteps/iron_jump", "stream": false}]},
     "step.iron_land": {"category": "player", "sounds": [{"name": "hbm:footsteps/iron_land", "stream": false}]},

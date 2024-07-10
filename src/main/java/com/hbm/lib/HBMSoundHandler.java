@@ -203,6 +203,7 @@ public final class HBMSoundHandler {
 	public static SoundEvent hit_metal;
 	public static SoundEvent hit_flesh;
 	public static SoundEvent vomit;
+	public static SoundEvent oppenheimer;
 	public static SoundEvent diarrhea;
 	public static SoundEvent ameno;
 	public static SoundEvent chekhov_fire;
@@ -480,6 +481,7 @@ public final class HBMSoundHandler {
 		hit_metal = register("weapon.hit_metal");
 		hit_flesh = register("weapon.hit_flesh");
 		vomit = register("entity.vomit");
+		oppenheimer = register("player.oppenheimer");
 		diarrhea = register("entity.diarrhea");
 		ameno = register("ameno");
 		chekhov_fire = register("turret.chekhov_fire");

@@ -1,7 +1,9 @@
 package com.hbm.blocks.bomb;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import com.hbm.lib.HBMSoundHandler;
 import com.hbm.util.I18nUtil;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.config.BombConfig;
@@ -33,10 +35,15 @@ import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import stanhebben.zenscript.annotations.NotNull;
 
 public class NukeGadget extends BlockContainer implements IBomb {
+
+	public World world;
 
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
 	
@@ -86,11 +93,19 @@ public class NukeGadget extends BlockContainer implements IBomb {
 			}
 		}
 	}
-	
+
 	public boolean igniteTestBomb(World world, int x, int y, int z) {
 		if (!world.isRemote) {
-			
-			world.playSound(null, x, y, z, SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.BLOCKS, 1.0f, world.rand.nextFloat() * 0.1F + 0.9F); // x,y,z,sound,volume,pitch
+
+			world.playSound(null, x, y, z, HBMSoundHandler.oppenheimer, SoundCategory.PLAYERS, 50000.0F, 1.0F); // x,y,z,sound,volume,pitch
+
+			try {
+                TimeUnit.MILLISECONDS.sleep(3500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+            world.playSound(null, x, y, z, SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.BLOCKS, 1.0f, world.rand.nextFloat() * 0.1F + 0.9F); // x,y,z,sound,volume,pitch
 			
 	    	world.spawnEntity(EntityNukeExplosionMK5.statFac(world, BombConfig.gadgetRadius, x + 0.5, y + 0.5, z + 0.5));
 			if (BombConfig.enableNukeClouds) {
@@ -100,7 +115,7 @@ public class NukeGadget extends BlockContainer implements IBomb {
 
 		return false;
 	}
-	
+
 	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 		worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
