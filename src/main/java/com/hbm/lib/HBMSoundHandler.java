@@ -256,6 +256,7 @@ public final class HBMSoundHandler {
 	public static SoundEvent alarmEas = registerBypass("alarm.easAlarm");
 	public static SoundEvent alarmAPCPass = registerBypass("alarm.apcPass");
 	public static SoundEvent alarmRazorTrain = registerBypass("alarm.razortrainHorn");
+	public static SoundEvent alarmCitadelAlert = registerBypass("alarm.citadel_alert_loop");
 	public static SoundEvent soyuzed = registerBypass("alarm.soyuzed");
 	public static SoundEvent metalStep = registerBypass("step.metal");
 	public static SoundEvent iron = registerBypass("step.iron");

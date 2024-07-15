@@ -1,0 +1,8 @@
+{
+	"loader": "forge:obj",
+	"flip_v": true,
+	"model": "hbm:models/citadel.obj",
+	"textures": {
+		"texture0": "hbm:models/citadel.mtl"
+	}
+}

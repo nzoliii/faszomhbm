@@ -1262,6 +1262,10 @@ public class ModBlocks {
 	public static final Block machine_microwave = new MachineMicrowave(Material.IRON, "machine_microwave").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab);
 	
 	public static final Block machine_cyclotron = new MachineCyclotron(Material.IRON, "machine_cyclotron").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab);
+
+	//Citadel
+	//public static final Block citadel_temp = new MachineCyclotron(Material.IRON, "citadel_temp").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.blockTab);
+
 	public static final int guiID_machine_cyclotron = 41;
 	
 	public static final Block machine_radgen = new MachineRadGen(Material.IRON, "machine_radgen").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab);

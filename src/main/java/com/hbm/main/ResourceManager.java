@@ -439,6 +439,9 @@ public class ResourceManager {
 	public static final IModelCustom mp_w_15_mirv = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/missile_parts/mp_w_15_mirv.obj"));
 	public static final IModelCustom mp_w_20 = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/missile_parts/mp_w_20.obj"));
 
+	//Citadel Prop for building structure
+	public static final IModelCustom citadel = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/citadel.obj"));
+
 	//Anti Mass Spectrometer
 	public static final IModelCustom ams_base = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/ams_base.obj"));
 	public static final IModelCustom ams_emitter = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/ams_emitter.obj"));
