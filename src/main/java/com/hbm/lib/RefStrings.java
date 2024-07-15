@@ -26,9 +26,9 @@ public class RefStrings {
 	//Drillgon200: I completely ignored this to make my own even worse naming system. Sigh.
 
 	// nzoliii's naming system because why not:
-	// §A+ -> new stuff
+	// §a+ -> new stuff
 	// §e= -> edited stuff
-	// §C- -> removed stuff
+	// §c- -> removed stuff
 	public static final String CLIENTSIDE = "com.hbm.main.ClientProxy";
 	public static final String SERVERSIDE = "com.hbm.main.ServerProxy";
 }
