@@ -16,7 +16,7 @@ public class RefStrings {
 	public static final String VERSION = "2.1-BETA-COMBINE";
 
 	// 2.0.2 changelog: public static final String CHANGELOG = "§a+ New vomit sounds.$§a+ New cough sounds.$§a+ Added more music.$§a+ More memes.$§a+ Added old insulator IV Bag crafting recipe.$§e= Fixed grammatical errors in en_us.lang.$§e= Renamed 'screm' to 'scream' in the files.$§e= Credits update in mcmod.info file.$§e= Some directories renamed.$§e= Gerald achievements and sounds replaced.$§e= Power diode max limit changed.";
-	public static final String CHANGELOG = "§e= Combine occupation of Earth.";
+	public static final String CHANGELOG = "§a+ Combine occupation of Earth.";
 
 	//HBM's Beta Naming Convention:
 	//V T (X)
