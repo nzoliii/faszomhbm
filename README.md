@@ -1,3 +1,11 @@
+<h1>
+This version of the mod is no longer in development.<br>
+You can find the new version here:<br>
+</h1>
+
+[GitHub](https://github.com/nzoliii/faszomhbm2)<br>
+[Curseforge](https://www.curseforge.com/minecraft/mc-mods/faszomhbm2)
+
 ![logo](https://raw.githubusercontent.com/nzoliii/faszomhbm/master/static_banners/logo.png)<br>
 This mod is about building nuclear reactors, rockets, nukes, weapons and bunkers.<br>
 It is based on the awesome work of Drillgon and HBM.<br>
